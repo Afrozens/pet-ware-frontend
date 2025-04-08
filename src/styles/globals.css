@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* success colors  */
+  --color-success-pressed: #4BBFB4; 
+  --color-success-primary: #46B4A9; 
+  --color-success-bg: #DEFFFC; 
+  --color-success-focus: #A1F5ED; 
+  --color-success-border: #67EBDE;
+  --color-success-hover: #30DECE;
+
+  /* warning colors */
+  --color-warning-pressed: #F2A03D; 
+  --color-warning-primary: #F2B035; 
+  --color-warning-bg: #FFEBC6; 
+  --color-warning-focus: #FFDCB1; 
+  --color-warning-border: #FFC682;
+  --color-warning-hover: #FFB55B;
+
+  /* danger colors */
+  --color-danger-pressed: #B90209; 
+  --color-danger-primary: #DC3545; 
+  --color-danger-bg: #FEEDEE; 
+  --color-danger-focus: #F0B3B6; 
+  --color-danger-border: #E88D91;
+  --color-danger-hover: #E1676C;
+
+  /* primary colors */
+  --color-primary-pressed: #432073; 
+  --color-primary-main: #4E3473; 
+  --color-primary-hover: #9C55F6;
+  --color-primary-border: #C0BBF4; 
+  --color-primary-focus: #D7C9FF; 
+  --color-primary-bg: #E8E7FD;
+  --color-primary-secondary: #F9F4FF;
+
+  /* text & icons colors */
+  --color-text-primary: #0A0A0A;
+  --color-text-description-primary: #424242;
+  --color-text-disabled: #616161;
+  --color-icon-hover: #757575;
+  --color-text-placeholder: #9E9E9E;
+  --color-icon-primary: #C2C2C2;
+}
