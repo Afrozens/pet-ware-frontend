@@ -1,6 +1,13 @@
+import { ReactNode } from "react";
 import type { Metadata } from "next";
-import "../styles/globals.css";
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+
 import { siteConfig } from "@/core/side";
+
+import "../../styles/globals.css";
+import { Locale } from "@/models/locale";
+import Provider from "@/components/Provider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL as string),
@@ -69,15 +76,22 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
+};
+
+export default async function RootLayout({ children, params: { locale } }: Props) {
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={`font-sans antialiased`}>
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          <Provider locale={locale as Locale}>
+            {children}
+          </Provider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
