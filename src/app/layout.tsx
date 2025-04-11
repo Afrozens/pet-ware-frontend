@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
 import "../styles/globals.css";
 import { siteConfig } from "@/core/side";
 
-const rubik = Rubik({
-  subsets: ["latin"],
-  variable: "--font-rubik",
-});
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL as string),
   title: {
@@ -81,7 +76,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.variable} font-sans antialiased`}>
+      <body className={`font-sans antialiased`}>
         {children}
       </body>
     </html>
