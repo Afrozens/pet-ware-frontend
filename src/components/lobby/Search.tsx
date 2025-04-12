@@ -76,9 +76,13 @@ const Search = () => {
       <Dropdown
         menu={{ items: itemsOne }}
         trigger={['click']}
-        placement="bottomCenter"
-        visible={visibleOne}
-        onVisibleChange={(visible) => setVisibleOne(visible)}
+        placement="bottom"
+        open={visibleOne}
+        onOpenChange={(open, info) => {
+          if (info?.source === 'trigger') {
+            setVisibleOne(open);
+          }
+        }}
       >
         <div
           className={`${visibleOne ? 'bg-primary-bg' : ''} container-field w-full mb-4 xl:mb-0`}
@@ -96,9 +100,13 @@ const Search = () => {
       <Dropdown
         menu={{ items: itemsSecond }}
         trigger={['click']}
-        placement="bottomCenter"
-        visible={visibleSecond}
-        onVisibleChange={(visible) => setVisibleSecond(visible)}
+        placement="bottom"
+        open={visibleSecond}
+        onOpenChange={(open, info) => {
+          if (info?.source === 'trigger') {
+            setVisibleSecond(open)
+          }
+        }}
       >
         <div
           className={`${visibleSecond ? 'bg-primary-bg' : ''} container-field w-full mb-4 xl:mb-0`}
@@ -116,9 +124,13 @@ const Search = () => {
       <Dropdown
         menu={{ items: itemsThird }}
         trigger={['click']}
-        placement="bottomCenter"
-        visible={visibleThird}
-        onVisibleChange={(visible) => setVisibleThird(visible)}
+        placement="bottom"
+        open={visibleThird}
+        onOpenChange={(open, info) => {
+          if (info?.source === 'trigger') {
+            setVisibleThird(open)
+          }
+        }}
       >
         <div
           className={`${visibleThird ? 'bg-primary-bg' : ''} container-field w-full mb-4 mr-14 xl:mb-0`}

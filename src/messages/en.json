@@ -1,6 +1,19 @@
 {
     "hello": "Hello",
     "components": {
+            "hero-section": {
+                "i-professional": "I am a professional",
+                "search-professional": "I'm looking for professionals",
+                "one-place": "all in one place",
+                "services": "specialized services and everything your pet needs",
+                "find-verified": "Find verified professionals in",
+                "directly": "directly in your",
+                "home": "home",
+                "you": "your",
+                "pet": "pets",
+                "professionals": "Professionals",
+                "for": "for"
+            },
         "search-general": {
             "one": {
                 "title": "Service type",

@@ -1,6 +1,19 @@
 {
     "hello": "Hola",
     "components": {
+        "hero-section": {
+            "i-professional": "Soy profesional",
+            "search-professional": "Busco profesionales",
+            "one-place": "en un solo lugar",
+            "services": "servicios especializados y todo lo que tu mascota necesita",
+            "find-verified": "Encuentra profesionales verificados en",
+            "directly": "directamente en tu",
+            "home": "hogar",
+            "you": "tus",
+            "pet": "mascotas",
+            "professionals": "Profesionales",
+            "for": "para"
+        },
         "search-general": {
             "one": {
                 "title": "Tipo de servicio",

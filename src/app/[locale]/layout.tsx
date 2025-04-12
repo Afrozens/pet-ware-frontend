@@ -1,14 +1,13 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import { nexa } from '@/fonts';
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
 import { siteConfig } from "@/core/side";
-
-import "../../styles/globals.css";
+import { nexa } from '@/fonts';
 import { Locale } from "@/models/locale";
 import Provider from "@/components/Provider";
+import "../../styles/globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL as string),

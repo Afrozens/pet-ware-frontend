@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState, useEffect, useId } from "react";
-
 import { motion } from "motion/react";
 
 export interface FlipTextProps {
@@ -44,7 +43,7 @@ export function FlipText({
   }, [words, interval]);
 
   return (
-    <motion.p
+    <motion.div
       layout
       layoutId={`words-here-${id}`}
       animate={{ width }}
@@ -82,6 +81,6 @@ export function FlipText({
           ))}
         </motion.div>
       </motion.div>
-    </motion.p>
+    </motion.div>
   );
 }

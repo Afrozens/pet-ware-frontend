@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import SearchGeneral from './SearchGeneral';
 import ButtonPrimary from '../commons/buttons/ButtonPrimary';
@@ -9,35 +10,36 @@ import { FlipText } from '../animate/FlipText';
 import { montserrat } from '@/fonts';
 
 const HeroSection = () => {
+  const t = useTranslations('components.hero-section');
   return (
     <article className='w-full min-h-screen bg-primary-pressed px-10 xl:px-16 2xl:px-20'>
         <section className='flex justify-between items-start w-full pt-44'>
           <div className='w-full flex flex-col gap-5 items-start'>
             <div className="mb-5 text-3xl xl:text-4xl 2xl:text-6xl font-semibold text-white space-y-3 md:space-y-4 lg:space-y-5">
-              <span className="block"><ColourText text='Profesionales' /> para</span>
-              <span className="block">tus <ColourText text='mascotas' />,</span>
-              <span className="block">directamente en tu <ColourText text='hogar' /></span>
+              <span className="block"><ColourText text={t('professionals')} /> {t('for')}</span>
+              <span className="block">{t('you')} <ColourText text={t('pet')} />,</span>
+              <span className="block">{t('directly')} <ColourText text={t('home')} /></span>
             </div>
             <div className={`text-xl xl:text-2xl w-full text-gray-400 ${montserrat.className}`}>
               <span className='block w-full'>
-                Encuentra cuidadores verificados en <FlipText words={["Puerto Ordaz", "San Felix", "Lechería", "Chacao"]}/>
+                {t('find-verified')} <FlipText words={["Puerto Ordaz", "San Felix", "Lechería", "Chacao"]}/>
               </span>
               <span className='block'>
-                servicios especializados y todo lo que tu mascota necesita
+                {t('services')}
               </span>
               <span className='block'>
-                en un solo lugar.
+                {t('one-place')}.
               </span>
             </div>
             <div className='w-full max-w-2xl flex gap-10 justify-between items-center'>
               <ButtonPrimary color='bg-success-pressed' small={false} withIcon={false}>
                 <span className='text-2xl text-white'>
-                  Buscar profesionales
+                  {t('search-professional')}
                 </span>
               </ButtonPrimary>
               <ButtonPrimary color='bg-white' small={false} withIcon={false}>
                 <span className='text-2xl text-black'>
-                  Soy profesional
+                  {t('i-professional')}
                 </span>
               </ButtonPrimary>
             </div>
