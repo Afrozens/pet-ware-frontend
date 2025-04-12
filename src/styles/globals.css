@@ -1,3 +1,5 @@
+@import url('./loader.css');
+
 @import "tailwindcss";
 
 @theme {
@@ -51,10 +53,22 @@
   }
   
   /* footer */
-
   .footer-link {
     @apply hover:opacity-80 hover:scale-105 transition-all flex gap-2 items-center;
   }
+
+    /* forms */
+    .form-initial {
+      @apply flex w-full max-w-xl flex-col gap-2 lg:gap-4;
+    }
+
+    .base-form {
+      @apply mt-4 flex w-full flex-col items-center justify-center gap-4 px-7;
+    }
+
+    .container-inputs {
+      @apply flex w-full items-center justify-between gap-4;
+    }
   
   /* lobby  */
   .container-field {

@@ -1,6 +1,6 @@
 import { DateAt } from "./commons";
 
-export type typeRole = 'admin' | 'client' | 'user';
+export type typeRole = 'admin' | 'client' | 'professional';
 
 export interface Role extends DateAt {
   name: typeRole;

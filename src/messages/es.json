@@ -1,6 +1,15 @@
 {
     "hello": "Hola",
+    "input": {
+        "password": "Contraseña",
+        "confirm-password": "Confirmar Contraseña",
+        "email": "Correo eléctronico"
+    },
     "components": {
+        "auth": {
+            "login": "Iniciar sesión",
+            "register": "Registrate"
+        },
         "hero-section": {
             "i-professional": "Soy profesional",
             "search-professional": "Busco profesionales",

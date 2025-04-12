@@ -1,0 +1,125 @@
+/* From Uiverse.io by rillala */ 
+.spinner {
+  position: absolute;
+  width: 25px;
+  height: 40px;
+}
+
+.spinner div {
+  position: absolute;
+  width: 50%;
+  height: 150%;
+  background: transparent;
+  transform: rotate(calc(var(--rotation) * 1deg))
+    translate(0, calc(var(--translation) * 1%));
+  animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
+  color: #4E3473;
+  text-align: end;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.spinner div:nth-child(1) {
+  --delay: 0.1;
+  --rotation: 36;
+  --translation: 150;
+}
+
+.spinner .middle {
+  position: relative;
+  background: transparent;
+  top: 15px;
+  left: -30px;
+  color: #46B4A9;
+}
+
+.spinner div:nth-child(2) {
+  --delay: 0.2;
+  --rotation: 72;
+  --translation: 150;
+}
+
+.spinner div:nth-child(3) {
+  --delay: 0.3;
+  --rotation: 108;
+  --translation: 150;
+}
+
+.spinner div:nth-child(4) {
+  --delay: 0.4;
+  --rotation: 144;
+  --translation: 150;
+}
+
+.spinner div:nth-child(5) {
+  --delay: 0.5;
+  --rotation: 180;
+  --translation: 150;
+}
+
+.spinner div:nth-child(6) {
+  --delay: 0.6;
+  --rotation: 230;
+  --translation: 180;
+}
+
+.spinner div:nth-child(7) {
+  --delay: 0.7;
+  --rotation: 275;
+  --translation: 180;
+}
+
+.spinner div:nth-child(8) {
+  --delay: 0.8;
+  --rotation: 310;
+  --translation: 180;
+}
+
+.spinner div:nth-child(9) {
+  --delay: 0.9;
+  --rotation: 330;
+  --translation: 150;
+}
+
+.spinner div:nth-child(10) {
+  --delay: 1;
+  --rotation: 360;
+  --translation: 150;
+}
+
+div.icon-1,
+div.icon-2 {
+  background: transparent;
+}
+
+.icon-1 svg {
+  transform: rotate(180deg);
+  position: relative;
+  left: -15px;
+}
+
+.icon-2 svg {
+  position: relative;
+  left: -15px;
+}
+
+@keyframes spinner-fzua35 {
+  0%,
+  10%,
+  20%,
+  30%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    transform: rotate(calc(var(--rotation) * 1deg))
+      translate(0, calc(var(--translation) * 1%));
+  }
+
+  50% {
+    transform: rotate(calc(var(--rotation) * 1deg))
+      translate(0, calc(var(--translation) * 1.5%));
+  }
+}
