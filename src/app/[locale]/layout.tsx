@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
+import { nexa } from '@/fonts';
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
@@ -86,7 +87,7 @@ export default async function RootLayout({ children, params: { locale } }: Props
 
   return (
     <html lang={locale}>
-      <body className={`font-sans antialiased`}>
+      <body className={`font-sans antialiased ${nexa.className}`}>
         <NextIntlClientProvider messages={messages}>
           <Provider locale={locale as Locale}>
             {children}

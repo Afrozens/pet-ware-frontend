@@ -11,6 +11,7 @@ type typeProps = {} & React.DetailedHTMLProps<
 interface Props extends PropsWithChildren, typeProps {
   withIcon?: boolean;
   loading?: boolean;
+  color?: string;
   small?: boolean;
   disabled?: boolean;
 }
@@ -19,6 +20,7 @@ const ButtonPrimary = ({
   children,
   withIcon = true,
   loading,
+  color,
   disabled,
   small = true,
   ...props
@@ -27,7 +29,7 @@ const ButtonPrimary = ({
     <button
       {...props}
       disabled={loading || disabled}
-      className={`disabled:bg-gray-400 disabled:text-white bg-warning-pressed disabled:cursor-not-allowed disabled:opacity-90  shadow-md hover:opacity-80 transition-all focus:scale-90 cursor-pointer hover:scale-105 font-medium 2xl:text-lg px-6 py-3 gap-4 flex rounded-3xl justify-center items-center ${small ? 'w-fit' : 'w-full text-xl h-16'} ${loading ? 'w-48 h-10' : ''}`}
+      className={`disabled:bg-gray-400 hover:translate-y-1 disabled:text-white ${color ?? 'bg-warning-pressed'} disabled:cursor-not-allowed disabled:opacity-90  shadow-md hover:opacity-80 transition-all focus:scale-90 cursor-pointer hover:scale-105 font-medium 2xl:text-lg px-6 py-3 gap-4 flex rounded-3xl justify-center items-center ${small ? 'w-fit' : 'w-full text-xl h-16'} ${loading ? 'w-48 h-10' : ''}`}
     >
       <span>
         {loading ? <LoadingOutlined className="text-2xl text-white" /> : children}

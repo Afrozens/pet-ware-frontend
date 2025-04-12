@@ -1,3 +1,23 @@
 {
-    "hello": "Hello"
+    "hello": "Hello",
+    "components": {
+        "search-general": {
+            "one": {
+                "title": "Service type",
+                "label": "Select your service"
+            },
+            "second": {
+                "title": "Location",
+                "label": "Select your location"
+            },
+            "third": {
+                "title": "Pet type",
+                "label": "Select your pet"
+            }
+        },
+        "translate-dropdown": {
+            "english": "English",
+            "spanish": "Spanish"
+        }
+    }
 }

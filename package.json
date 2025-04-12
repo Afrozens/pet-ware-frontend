@@ -15,11 +15,14 @@
     "@vis.gl/react-google-maps": "^1.5.2",
     "antd": "^5.24.6",
     "axios": "^1.8.4",
+    "motion": "^12.6.3",
     "next": "15.2.4",
     "next-intl": "^4.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.55.0",
     "react-redux": "^9.2.0",
+    "react-select": "^5.10.1",
     "sonner": "^2.0.3"
   },
   "devDependencies": {
