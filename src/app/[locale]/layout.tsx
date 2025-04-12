@@ -51,12 +51,12 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    // images: [
-    //   {
-    //     url: "/og-image.jpg",
-    //     alt: "Pata Mia - Plataforma de servicios para mascotas",
-    //   },
-    // ],
+    images: [
+      {
+        url: "/logotype.svg",
+        alt: "Pata Mia - Plataforma de servicios para mascotas",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -70,9 +70,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/logotype.svg",
+    shortcut: "/logotype.svg",
+    apple: "/logotype.svg",
   },
 };
 

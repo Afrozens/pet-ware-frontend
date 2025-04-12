@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8">
            {/* LOGO movido a la derecha */}
            <div className='w-full md:w-auto flex justify-end'>
-            <span className='text-6xl'>LOGO</span>
+              <Image src={'/logotype.svg'} alt="pet image reference" className="-rotate-45 mb-20" width={90} height={90} />
           </div>
           {/* Sección de contacto y términos (ahora a la izquierda) */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 w-full md:w-full max-w-5xl">
