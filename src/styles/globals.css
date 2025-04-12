@@ -66,6 +66,26 @@
       @apply mt-4 flex w-full flex-col items-center justify-center gap-4 px-7;
     }
 
+    .form-title {
+      @apply mb-4 text-center text-3xl font-semibold leading-none tracking-tight;
+    }
+  
+    .form-subtitle {
+      @apply mb-8 border-b max-w-3xl pb-8 text-center text-base font-normal opacity-80;
+    }
+
+    .title-information {
+      @apply text-3xl xl:text-5xl px-1 xl:px-0 font-bold;
+    }
+  
+    .paragraph-information {
+      @apply text-base md:text-lg xl:text-xl px-10 text-center xl:text-start;
+    }
+  
+    .container-information {
+      @apply container mb-10 self-center gap-10 w-full flex flex-col justify-center items-center text-center;
+    }
+
     .container-inputs {
       @apply flex w-full items-center justify-between gap-4;
     }

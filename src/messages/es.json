@@ -6,7 +6,14 @@
         "email": "Correo eléctronico"
     },
     "components": {
+        "home": "Inicio",
         "auth": {
+            "forgot": {
+                "recovery": "¿Ha olvidado su contraseña?"
+            },
+            "back": "¿Quieres volver?",
+            "login-title": "Bienvenido de vuelta a tu comunidad pet-friendly",
+            "login-description": "Inicia sesión para conectar con los mejores cuidadores y veterinarios, o gestionar tus servicios profesionales. En Pata Mia, cada mascota recibe el amor y cuidado que se merece.",
             "login": "Iniciar sesión",
             "register": "Registrate"
         },

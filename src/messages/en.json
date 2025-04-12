@@ -6,7 +6,14 @@
         "email": "Email"
     },
     "components": {
+        "home": "Home",
+        "forgot": {
+            "recovery": "Forgot your password?"
+        },
         "auth": {
+            "back": "You want back?",
+            "login-title": "Welcome back to your pet-loving community!",
+            "login-description": "Sign in to connect with top-rated pet sitters and veterinarians—or manage your professional services. At Pata Mia, every pet gets the love and care they deserve.",
             "login": "Login",
             "register": "Register"
         },
