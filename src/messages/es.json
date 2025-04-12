@@ -18,6 +18,15 @@
         "translate-dropdown": {
             "english": "Inglés",
             "spanish": "Español"
+        },
+        "footer": {
+            "explore": "Explora",
+            "reserved": "Todos los derechos reservados",
+            "conditions": "Términos y Condiciones",
+            "data": "Políticas de tratamiento de datos",
+            "terms": "Términos Legales",
+            "contact": "Contáctanos",
+            "follow": "¡Siguenos!"
         }
     }
 }
