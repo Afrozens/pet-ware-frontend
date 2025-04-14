@@ -51,7 +51,7 @@ const LoginForm = () => {
             message: t('validates.email'),
           },
         }}
-        isRequired={true}
+        isRequired
         placeholder="Correo@example.com"
       />
       <FieldInput
@@ -75,7 +75,7 @@ const LoginForm = () => {
             message: t('validates.password.regex'),
           },
         }}
-        isRequired={true}
+        isRequired
         placeholder="••••••••••"
       />
       <Link href={'/recovery'} className="transition-opacity ml-auto w-fit hover:opacity-80">

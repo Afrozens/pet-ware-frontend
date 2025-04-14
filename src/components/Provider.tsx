@@ -24,6 +24,7 @@ const Provider = ({ children, locale }: Props) => {
         theme={{
           token: {
             colorBorder: '#000',
+            colorPrimary: "#4E3473"
           },
           components: {
             Rate: {

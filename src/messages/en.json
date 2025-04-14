@@ -15,7 +15,9 @@
             "login-title": "Welcome back to your pet-loving community!",
             "login-description": "Sign in to connect with top-rated pet sitters and veterinarians—or manage your professional services. At Pata Mia, every pet gets the love and care they deserve.",
             "login": "Login",
-            "register": "Register"
+            "register": "Register",
+            "register-title": "Register as a professional",
+            "register-description": "Start by indicating that the registration is only for professionals (veterinarians, caretakers, etc.)"
         },
             "hero-section": {
                 "i-professional": "I am a professional",

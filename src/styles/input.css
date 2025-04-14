@@ -1,0 +1,102 @@
+
+/* input select - react select */
+
+.css-b62m3t-container {
+    height: 58px !important;
+    cursor: pointer !important;
+  }
+  
+  .css-unqe6r-control {
+    padding-top: 0px !important;
+    height: 58px !important;
+    border-radius: 19px !important;
+    border-color: #000 !important;
+    cursor: pointer !important;
+    background: #f3f4f6 !important;
+  }
+  
+  .css-1d65sih-control {
+    padding-top: 0px !important;
+    height: 58px !important;
+    border-radius: 19px !important;
+    border-color: #000 !important;
+    box-shadow: none !important;
+    background: #f3f4f6 !important;
+  }
+  
+  .css-1u9des2-indicatorSeparator {
+    background: #000 !important;
+    margin: 0px !important;
+  }
+  
+  .css-tj5bde-Svg {
+    fill: #000 !important;
+  }
+  
+  .css-15lsz6c-indicatorContainer {
+    padding: 0 24px !important;
+  }
+  
+  .css-1xc3v61-indicatorContainer {
+    padding: 0 24px !important;
+  }
+  
+  .css-1jqq78o-placeholder {
+    font-weight: 600 !important;
+    padding-left: 32px !important;
+  }
+  
+  .css-1dimb5e-singleValue {
+    padding-left: 32px !important;
+  }
+  
+  .ant-picker {
+    padding-top: 0px !important;
+    height: 58px !important;
+    border-radius: 19px !important;
+    border-color: #000 !important;
+    background: #f3f4f6 !important;
+    max-width: 510px !important;
+    width: 100% !important;
+    font-size: 20px !important;
+  }
+
+  
+/* phone input  */
+
+.country-list {
+  z-index: 999 !important;
+}
+
+.react-tel-input {
+  padding-top: 0px !important;
+  height: 58px !important;
+  border-radius: 19px !important;
+  color: black;
+  border-color: #000 !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  background: #f3f4f6 !important;
+}
+
+.flag-dropdown {
+  border-top-left-radius: 19px !important;
+  border-bottom-left-radius: 19px !important;
+}
+
+.flag.pe {
+  width: 20px !important;
+  height: 15px !important;
+}
+
+.form-control {
+  padding-top: 0px !important;
+  height: 58px !important;
+  width: 100% !important;
+  font-size: 18px !important;
+  font-family: nexa;
+  font-weight: 300 !important;
+  border-radius: 19px !important;
+  border-color: #000 !important;
+  background: #f3f4f6 !important;
+}

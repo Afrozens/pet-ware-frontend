@@ -8,6 +8,7 @@ import { nexa } from '@/fonts';
 import { Locale } from "@/models/locale";
 import Provider from "@/components/Provider";
 import "../../styles/globals.css";
+import 'react-phone-input-2/lib/style.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL as string),

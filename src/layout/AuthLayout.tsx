@@ -2,19 +2,24 @@
 
 import { PropsWithChildren } from 'react'
 import { LeftOutlined } from '@ant-design/icons'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import Footer from '@/components/commons/Footer'
 import ButtonRegister from '@/components/commons/buttons/ButtonRegister'
 
-const AuthLayout = ({ children }: PropsWithChildren) => {
+interface Props extends PropsWithChildren {
+  withAd?: boolean
+}
+
+const AuthLayout = ({ children, withAd = true }: Props) => {
   return (
     <>
       <section className='w-full min-h-screen flex'>
         {/* ad information */}
-        <div className='hidden xl:block xl:max-w-[20%] xl:w-full h-screen bg-[#F5FAFF]'>
-        </div>
+        {withAd ? (
+          <div className='hidden xl:block xl:max-w-[20%] xl:w-full h-screen bg-[#F5FAFF]'>
+          </div>
+        ) : null}
         
         <div className='flex-1 flex bg-white'>
           <div className='w-full relative h-full'>

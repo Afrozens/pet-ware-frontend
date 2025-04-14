@@ -46,3 +46,18 @@ export const optionPet = [
         value: "Horse"
     },
 ]
+
+export const optionType = [
+    {
+      label: 'V',
+      value: 'v',
+    },
+    {
+      label: 'RIF',
+      value: 'rif',
+    },
+    {
+      label: 'E',
+      value: 'e',
+    },
+  ];

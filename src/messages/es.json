@@ -8,6 +8,8 @@
     "components": {
         "home": "Inicio",
         "auth": {
+            "register-title": "Regístrate como profesional",
+            "register-description": "Inicia indicando que el registro es solo para profesionales (veterinarios, cuidadores, etc.)",
             "forgot": {
                 "recovery": "¿Ha olvidado su contraseña?"
             },
