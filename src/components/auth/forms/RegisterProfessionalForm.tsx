@@ -1,5 +1,6 @@
 'use client'
 
+import FieldAutoComplete from "@/components/commons/fields/FieldAutoComplete";
 import FieldDescription from "@/components/commons/fields/FieldDescription";
 import FieldInput from "@/components/commons/fields/FieldInput";
 import FieldPhone from "@/components/commons/fields/FieldPhone";
@@ -22,12 +23,6 @@ const RegisterProfessionalForm = () => {
       borderRadius: token.borderRadiusLG,
       border: 'none',
     };
-    const text = `
-        A dog is a type of domesticated animal.
-        Known for its loyalty and faithfulness,
-        it can be found as a welcome guest in many households across the world.
-        `;
-
         const itemsCollapse: CollapseProps['items'] = [
             {
               key: '1',
@@ -123,6 +118,14 @@ const RegisterProfessionalForm = () => {
                         />
                         )}
                     />
+                    <FieldAutoComplete
+                        classAditional="w-full"
+                        label={'address'}
+                      id="address"
+                      name="address"
+                      placeholder="5055 Wilshire Blvd. Suite 860"
+                      isRequired
+                    />
                 </div>
               ),
               style: panelStyle,
@@ -158,6 +161,7 @@ const RegisterProfessionalForm = () => {
               style: panelStyle,
             },
           ];
+    
     const items = [
         {
           title: 'Basic info',
@@ -169,8 +173,9 @@ const RegisterProfessionalForm = () => {
           title: 'Login info',
         },
       ];
+
   return (
-    <div className="flex flex-col max-w-3xl items-center justify-center w-full h-full">
+    <div className="flex flex-col max-w-3xl gap-5 -mt-5 items-center justify-center w-full h-full">
         <Steps current={0} size="small" labelPlacement="vertical" items={items} />
         <Collapse className="w-full" bordered={false} accordion items={itemsCollapse} 
             expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />} 

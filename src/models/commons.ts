@@ -44,6 +44,10 @@ export interface List {
   disabled?: boolean;
 }
 
+interface Text {
+  text: string;
+}
+
 interface Prediction {
   place: string;
   placeId: string;
