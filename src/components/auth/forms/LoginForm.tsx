@@ -11,7 +11,6 @@ import FieldError from '@/components/commons//fields/FieldError';
 import useSubmit from '@/hooks/useSubmit';
 import AuthService from '@/services/AuthService';
 import { SignIn } from '@/models/auth';
-import { regexPassword } from '@/utils/regex';
 
 const LoginForm = () => {
   const authService = new AuthService();
@@ -65,14 +64,6 @@ const LoginForm = () => {
           required: {
             value: true,
             message: t('validates.password.required'),
-          },
-          minLength: {
-            value: 8,
-            message: t('validates.password.eight'),
-          },
-          pattern: {
-            value: regexPassword,
-            message: t('validates.password.regex'),
           },
         }}
         isRequired

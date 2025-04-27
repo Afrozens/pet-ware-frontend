@@ -37,7 +37,7 @@ class AuthService {
         ...dataOutside,
         email: dataOutside.email.toLowerCase(),
       };
-      await axios.post('/auth/register-client', data);
+      await axios.post('/auth/register/client', data);
     } catch (error) {
       throw formatedErrorServices(error);
     }
