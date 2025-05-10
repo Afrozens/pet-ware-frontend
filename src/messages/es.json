@@ -2,6 +2,13 @@
   "hello": "Hola",
   "input": {
     "password": "Contraseña",
+    "first-name": "Nombre",
+    "last-name": "Apellido",
+    "phone-number": "Número teléfonico",
+    "description-professional": "Descripción como profesional",
+    "address": "Dirección",
+    "type-document": "Tipo de documento",
+    "document": "Documento",
     "confirm-password": "Confirmar Contraseña",
     "email": "Correo eléctronico"
   },
@@ -47,7 +54,38 @@
     "specialized-feeding-service": "Servicio de alimentación especializada",
     "specialized-feeding-service-description": "Preparación y suministro de dietas especiales para mascotas."
   },
+  "validates": {
+      "required": "Este campo es requerido",
+      "min-length": "Mínimo {value} caracteres",
+      "max-length": "Máximo {value} caracteres",
+      "letters-only": "Solo se permiten letras",
+      "positive-number": "Debe ser un número positivo",
+      "document-too-long": "El número de documento es demasiado largo",
+      "description-length": "La descripción debe tener entre 20 y 500 caracteres",
+      "email-invalid": "Por favor ingresa un correo electrónico válido",
+      "phone-invalid": "Por favor ingresa un número de teléfono válido",
+      "address-required": "La dirección es requerida",
+      "password-requirements": "La contraseña debe contener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial",
+      "passwords-match": "Las contraseñas deben coincidir"
+    },
   "components": {
+    "register-professional": {
+      "back": "Anterior",
+      "next": "Siguiente",
+      "finish": "Regístrate ahora",
+      "first-step": {
+        "title": "Información básica",
+        "subtitle": "Ingresa tu información personal como cuidador profesional, veterinario u otro especialista en cuidado de mascotas"
+      },
+      "second-step": {
+        "title": "Información de contacto",
+         "subtitle": "Ingresa tus datos de contacto para que los clientes puedan comunicarse contigo"
+      },
+      "third-step": {
+        "title": "Información de acceso",
+        "subtitle": "Crea credenciales seguras para acceder a tu cuenta profesional"
+      }
+    },
     "home": "Inicio",
     "auth": {
       "register-title": "Regístrate como profesional",

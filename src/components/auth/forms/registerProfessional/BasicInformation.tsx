@@ -1,7 +1,6 @@
 'use client';
 
 import { Controller, useFormContext } from 'react-hook-form';
-
 import ButtonPrimary from '@/components/commons/buttons/ButtonPrimary';
 import FieldDescription from '@/components/commons/fields/FieldDescription';
 import FieldInput from '@/components/commons/fields/FieldInput';
@@ -9,18 +8,19 @@ import FieldSelect from '@/components/commons/fields/FieldSelect';
 import { montserrat } from '@/fonts';
 import { User } from '@/models/user';
 import { optionType } from '@/stub/optionStub';
+import { useTranslations } from 'next-intl';
 
-interface Value
-  extends Pick<
-    User,
-    'first_name' | 'last_name' | 'type_document' | 'document' | 'description'
-  > {}
+interface Value extends Pick<User, 'first_name' | 'last_name' | 'type_document' | 'document' | 'description'> {}
 
 interface Props {
   handleNext: () => void;
 }
 
 const BasicInformation = ({ handleNext }: Props) => {
+  const t = useTranslations('components.register-professional');
+  const tInput = useTranslations('input');
+  const tv = useTranslations('validates');
+  
   const {
     control,
     register,
@@ -53,7 +53,7 @@ const BasicInformation = ({ handleNext }: Props) => {
   return (
     <div className="flex flex-col gap-5 justify-start items-start w-full p-4">
       <p className={`${montserrat.className} -mt-5 text-gray-800 font-light`}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, impedit.
+        {t('first-step.subtitle')}
       </p>
 
       <div className="container-inputs">
@@ -61,23 +61,23 @@ const BasicInformation = ({ handleNext }: Props) => {
           rules={{
             required: {
               value: true,
-              message: 'El nombre es requerido',
+              message: tv('required'),
             },
             minLength: {
               value: 2,
-              message: 'Mínimo 2 caracteres',
+              message: tv('min-length', { value: 2 }),
             },
             maxLength: {
               value: 50,
-              message: 'Máximo 50 caracteres',
+              message: tv('max-length', { value: 50 }),
             },
             pattern: {
               value: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
-              message: 'Solo se permiten letras',
+              message: tv('letters-only'),
             },
           }}
           classAditional="w-full"
-          label={'Nombre del profesional'}
+          label={tInput('first-name')}
           id="first_name"
           error={errors.first_name?.message}
           register={register}
@@ -90,24 +90,24 @@ const BasicInformation = ({ handleNext }: Props) => {
           rules={{
             required: {
               value: true,
-              message: 'El apellido es requerido',
+              message: tv('required'),
             },
             minLength: {
               value: 2,
-              message: 'Mínimo 2 caracteres',
+              message: tv('min-length', { value: 2 }),
             },
             maxLength: {
               value: 50,
-              message: 'Máximo 50 caracteres',
+              message: tv('max-length', { value: 50 }),
             },
             pattern: {
               value: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
-              message: 'Solo se permiten letras',
+              message: tv('letters-only'),
             },
           }}
           classAditional="w-full"
           error={errors.last_name?.message}
-          label={'Apellido del profesional'}
+          label={tInput('last-name')}
           register={register}
           id="last_name"
           name="last_name"
@@ -122,15 +122,15 @@ const BasicInformation = ({ handleNext }: Props) => {
             name="type_document"
             control={control}
             rules={{
-              required: 'El tipo de documento es requerido',
+              required: tv('required'),
             }}
             render={({ field, formState: { errors } }) => (
               <FieldSelect
                 options={optionType}
                 classAditional="col-span-2"
                 field={field}
-                label={'Tipo de documento'}
-                placeholder="NIT"
+                label={tInput('type-document')}
+                placeholder="V"
                 error={errors.type_document?.message}
                 id="type_document"
                 name="type_document"
@@ -147,20 +147,20 @@ const BasicInformation = ({ handleNext }: Props) => {
             rules={{
               required: {
                 value: true,
-                message: 'El documento es requerido',
+                message: tv('required'),
               },
               min: {
                 value: 1,
-                message: 'El documento debe ser positivo',
+                message: tv('positive-number'),
               },
               max: {
                 value: 9999999999,
-                message: 'Documento demasiado largo',
+                message: tv('document-too-long'),
               },
             }}
             error={errors.document?.message}
             classAditional="col-start-3 col-end-6"
-            label={'Documento'}
+            label={tInput('document')}
             register={register}
             type="number"
             placeholder="10122012334"
@@ -175,27 +175,27 @@ const BasicInformation = ({ handleNext }: Props) => {
         rules={{
           required: {
             value: true,
-            message: 'La descripción es requerida',
+            message: tv('required'),
           },
           minLength: {
             value: 20,
-            message: 'Mínimo 20 caracteres',
+            message: tv('description-length'),
           },
           maxLength: {
             value: 500,
-            message: 'Máximo 500 caracteres',
+            message: tv('description-length'),
           },
         }}
         register={register}
         error={errors.description?.message}
-        label={'Experiencia como profesional'}
+        label={tInput('description-professional')}
         id="description"
         name="description"
       />
 
       <div className="flex w-full justify-end">
         <ButtonPrimary type="button" onClick={handleNext} disabled={!isFormComplete}>
-          Siguiente
+          {t('next')}
         </ButtonPrimary>
       </div>
     </div>

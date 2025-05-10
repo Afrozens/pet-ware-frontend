@@ -2,6 +2,13 @@
   "hello": "Hello",
   "input": {
     "password": "Password",
+    "first-name": "Name",
+    "last-name": "Last Name",
+    "phone-number": "Phone Number",
+    "address": "Address",
+    "description-professional": "Description as a professional",
+    "type-document": "Type Document",
+    "document": "Document",
     "confirm-password": "Confirm Password",
     "email": "Email"
   },
@@ -47,7 +54,38 @@
     "specialized-feeding-service": "Specialized feeding service",
     "specialized-feeding-service-description": "Preparation and supply of special diets for pets."
   },
+  "validates": {
+      "required": "This field is required",
+      "min-length": "Minimum {value} characters",
+      "max-length": "Maximum {value} characters",
+      "letters-only": "Only letters are allowed",
+      "positive-number": "Must be a positive number",
+      "document-too-long": "Document number is too long",
+      "description-length": "Description must be between 20 and 500 characters",
+      "email-invalid": "Please enter a valid email address",
+      "phone-invalid": "Please enter a valid phone number",
+      "address-required": "Address is required",
+      "password-requirements": "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number and one special character",
+      "passwords-match": "Passwords must match"
+    },
   "components": {
+    "register-professional": {
+      "back": "Previous",
+      "next": "Siguiente",
+      "finish": "Register now",
+      "first-step": {
+        "title": "Basic information",
+        "subtitle": "Enter your personal information as a professional caregiver, veterinarian, or other pet care specialist"
+      },
+      "second-step": {
+        "title": "Contact information",
+        "subtitle": "Enter your contact details so clients can reach you"
+      },
+      "third-step": {
+        "title": "Login information",
+        "subtitle": "Create secure credentials to access your professional account"
+      }
+    },
     "home": "Home",
     "forgot": {
       "recovery": "Forgot your password?"

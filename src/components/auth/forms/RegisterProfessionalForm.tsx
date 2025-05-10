@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { CaretRightOutlined } from '@ant-design/icons';
 import { Collapse, Steps, theme } from 'antd';
 import { CollapseProps } from 'antd/lib';
-import { FormProvider, useForm } from 'react-hook-form';
+import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
+import { useTranslations } from 'next-intl';
 
 import LoginInformation from './registerProfessional/LoginInformation';
 import ContactInformation from './registerProfessional/ContactInformation';
@@ -14,6 +15,7 @@ import ButtonPrimary from '@/components/commons/buttons/ButtonPrimary';
 const RegisterProfessionalForm = () => {
   const { token } = theme.useToken();
   const form = useForm();
+  const t = useTranslations('components.register-professional')
   const [currentStep, setCurrentStep] = useState(0);
   const [activePanels, setActivePanels] = useState<string[]>(['1']);
 
@@ -23,6 +25,10 @@ const RegisterProfessionalForm = () => {
     borderRadius: token.borderRadiusLG,
     border: 'none',
   };
+
+  const onSubmit: SubmitHandler<any> = async (data) => {
+    console.log(data, 'asd')
+  }
 
   const handleNext = () => {
     const nextStep = currentStep + 1;
@@ -39,49 +45,41 @@ const RegisterProfessionalForm = () => {
   const itemsCollapse: CollapseProps['items'] = [
     {
       key: '1',
-      label: 'Basic information',
+      label: t('first-step.title'),
       children: <BasicInformation handleNext={handleNext} />,
       style: panelStyle,
     },
     {
       key: '2',
-      label: 'Contact information',
+      label: t('second-step.title'),
       children: <ContactInformation handlePrev={handlePrev} handleNext={handleNext} />,
       style: panelStyle,
     },
     {
       key: '3',
-      label: 'Login information',
-      children: (
-        <div className="flex flex-col gap-4">
-          <LoginInformation />
-          <div className="flex justify-between">
-            <ButtonPrimary withIcon={false} color="#AEA8B3" onClick={handlePrev}>
-              Anterior
-            </ButtonPrimary>
-            <ButtonPrimary type="button">Enviar</ButtonPrimary>
-          </div>
-        </div>
-      ),
+      label: t('third-step.title'),
+      children: <form onSubmit={form.handleSubmit(onSubmit)}>
+          <LoginInformation handlePrev={handlePrev} />
+        </form>,
       style: panelStyle,
     },
   ];
 
   const items = [
     {
-      title: 'Basic info',
+      title: t('first-step.title'),
     },
     {
-      title: 'Contact info',
+      title: t('second-step.title'),
     },
     {
-      title: 'Login info',
+      title: t('third-step.title'),
     },
   ];
 
   return (
     <FormProvider {...form}>
-      <form className="flex flex-col max-w-3xl gap-5 mb-10 -mt-5 items-center justify-center w-full h-full">
+      <div className="flex flex-col max-w-3xl gap-5 mb-10 -mt-5 items-center justify-center w-full h-full">
         <Steps
           current={currentStep}
           size="small"
@@ -96,7 +94,7 @@ const RegisterProfessionalForm = () => {
           expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
           onChange={(keys) => {}}
         />
-      </form>
+      </div>
     </FormProvider>
   );
 };
