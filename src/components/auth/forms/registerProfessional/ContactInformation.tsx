@@ -14,7 +14,12 @@ interface Value {
     address: string;
 }
 
-const ContactInformation = () => {
+interface Props {
+  handlePrev: () => void
+  handleNext: () => void
+}
+
+const ContactInformation = ({ handleNext, handlePrev }: Props) => {
     const { setValue, register, watch, control, formState: { errors } } = useFormContext<Value>()
 
     const [address, email, phone_number] = watch([
@@ -73,8 +78,15 @@ const ContactInformation = () => {
                       isRequired
                     />
 
-                     <div className="flex w-full justify-end">
+                     <div className="flex w-full justify-between">
+                        <ButtonPrimary
+                              type="button"
+                            onClick={handlePrev}
+>
+                              Volver
+                            </ButtonPrimary>
                             <ButtonPrimary
+                            onClick={handleNext}
                               type="button"
                               disabled={!isFormComplete}
                             >

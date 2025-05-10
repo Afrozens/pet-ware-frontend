@@ -16,7 +16,7 @@ const RegisterProfessionalForm = () => {
     const { token } = theme.useToken();
     const form = useForm();
     const [currentStep, setCurrentStep] = useState(0);
-    const [activePanels, setActivePanels] = useState<string[]>(['3']);
+    const [activePanels, setActivePanels] = useState<string[]>(['1']);
 
     const panelStyle: React.CSSProperties = {
       marginBottom: 24,
@@ -42,7 +42,7 @@ const RegisterProfessionalForm = () => {
           key: '1',
           label: 'Basic information',
           children: (
-            <BasicInformation />
+            <BasicInformation handleNext={handleNext} />
           ),
           style: panelStyle,
         },
@@ -50,7 +50,7 @@ const RegisterProfessionalForm = () => {
           key: '2',
           label: 'Contact information',
           children: (
-            <ContactInformation />
+            <ContactInformation handlePrev={handlePrev} handleNext={handleNext} />
           ),
           style: panelStyle,
         },

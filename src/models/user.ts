@@ -8,10 +8,15 @@ export interface Role extends DateAt {
   id: string;
 }
 
+export interface Professional extends DateAt {
+  description: string;
+}
+
 export interface User extends DateAt {
   id: string;
-  name: string;
-  lastname: string;
+  first_name: string;
+  last_name: string;
+  description: string;
   email: string;
   active: boolean;
   address: string | null;

@@ -1,23 +1,22 @@
 'use client';
 
+import { Controller, useFormContext } from 'react-hook-form';
+
 import ButtonPrimary from '@/components/commons/buttons/ButtonPrimary';
 import FieldDescription from '@/components/commons/fields/FieldDescription';
 import FieldInput from '@/components/commons/fields/FieldInput';
 import FieldSelect from '@/components/commons/fields/FieldSelect';
 import { montserrat } from '@/fonts';
+import { User } from '@/models/user';
 import { optionType } from '@/stub/optionStub';
-import React from 'react';
-import { Controller, useFormContext } from 'react-hook-form';
 
-interface Value {
-  first_name: string;
-  last_name: string;
-  type_document: string;
-  document: number;
-  description: string;
+interface Value extends Pick<User, 'first_name' | 'last_name' | 'type_document' | 'document' | 'description'> {}
+
+interface Props {
+  handleNext: () => void
 }
 
-const BasicInformation = () => {
+const BasicInformation = ({ handleNext }: Props) => {
   const { 
     control, 
     register, 
@@ -193,6 +192,7 @@ const BasicInformation = () => {
       <div className="flex w-full justify-end">
         <ButtonPrimary 
           type="button"
+          onClick={handleNext}
           disabled={!isFormComplete}
         >
           Siguiente
