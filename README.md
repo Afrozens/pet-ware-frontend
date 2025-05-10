@@ -1,6 +1,6 @@
-# 🐾 Pata Mia - Frontend 
+# 🐾 Pata Mia - Frontend
 
-**Connecting pet lovers with trusted professionals**  
+**Connecting pet lovers with trusted professionals**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-15.0+-black?logo=next.js)](https://nextjs.org/)
@@ -13,32 +13,36 @@ Pata Mia is the premier platform bridging the gap between pet owners and certifi
 **For Professionals**  
 ✅ Publish and manage your services  
 ✅ Handle appointments seamlessly  
-✅ Receive secure payments  
+✅ Receive secure payments
 
 **For Pet Owners**  
 🔍 Discover verified caregivers  
 📅 Schedule services with confidence  
-💳 Secure payment processing  
+💳 Secure payment processing
 
-*"We care for your pets like family"*
+_"We care for your pets like family"_
 
 ## 🛠 Tech Stack
 
 ### Core Framework
+
 - **Next.js 15** (App Router) - Optimal SSR/SSG capabilities
 - **TypeScript** - Type-safe development
 
 ### Styling
+
 - **TailwindCSS** - Utility-first CSS framework
 - **Ant Design** - Enterprise-grade UI components (Tailwind-based)
 
 ### Advanced Features
+
 - **WebSocket** - Real-time notifications and updates
 - **Tanstack React Query** - Data fetching and state management
 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js ≥ 18.x
 - npm ≥ 9.x
 - Git
@@ -67,9 +71,11 @@ pet-ware-front/
 ```
 
 ### Installation
+
 ```bash
 git clone https://github.com/Afrozens/pet-ware-frontend.git
 cd pet-ware-frontend
 npm install
 cp .env.example .env.local  # Configure your environment variables
 npm run dev
+```

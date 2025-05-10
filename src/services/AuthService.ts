@@ -42,7 +42,6 @@ class AuthService {
       throw formatedErrorServices(error);
     }
   };
-
 }
 
 export default AuthService;

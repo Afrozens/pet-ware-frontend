@@ -1,7 +1,7 @@
 'use client';
 
 import PhoneInput, { PhoneInputProps } from 'react-phone-input-2';
-import type { ControllerRenderProps} from 'react-hook-form';
+import type { ControllerRenderProps } from 'react-hook-form';
 import { EditOutlined } from '@ant-design/icons';
 
 import FieldError from './FieldError';
@@ -18,15 +18,7 @@ type Props = {
   field?: ControllerRenderProps<any, string>;
 } & AttributeProps;
 
-const FieldPhone = ({
-  label,
-  isRequired,
-  id,
-  error,
-  name,
-  field,
-  ...props
-}: Props) => {
+const FieldPhone = ({ label, isRequired, id, error, name, field, ...props }: Props) => {
   return (
     <div
       className={`${nexa.className} flex w-full justify-between relative items-center gap-10`}

@@ -135,12 +135,10 @@ const RegisterClientForm = ({ onClose }: Props) => {
                     placeholder="••••••••••"
                   />
                 </div>
-                <ButtonPrimary loading={isLoading}>
-                  Registrarse
-                </ButtonPrimary>
+                <ButtonPrimary loading={isLoading}>Registrarse</ButtonPrimary>
               </form>
               <small className="mt-2 text-center text-xs text-gray-800">
-                ¿Ya tienes una cuenta? {" "}
+                ¿Ya tienes una cuenta?{' '}
                 <Link
                   className="font-semibold text-primary transition-opacity hover:opacity-80"
                   href="loguearse"
@@ -149,7 +147,7 @@ const RegisterClientForm = ({ onClose }: Props) => {
                 </Link>
               </small>
               <small className="-my-2 text-xs text-gray-700">
-                Al registrarte aceptas los {" "}
+                Al registrarte aceptas los{' '}
                 <a href="#" className="text-primary transition-opacity hover:opacity-80">
                   terminos y condiciones
                 </a>
@@ -159,7 +157,7 @@ const RegisterClientForm = ({ onClose }: Props) => {
               </div>
               <button
                 onClick={() => setIsStart(false)}
-                type='button'
+                type="button"
                 className="cursor-pointer -mt-2 mb-1 flex w-fit items-center gap-2 font-medium transition-all hover:-translate-x-2 hover:opacity-80"
               >
                 <LeftOutlined className="text-[14px]" /> Volver
@@ -174,9 +172,7 @@ const RegisterClientForm = ({ onClose }: Props) => {
                 height={125}
                 className="mx-auto bg-cover motion-safe:animate-bounce"
               />
-              <span className="text-xl font-bold">
-                Activación de cuenta
-              </span>
+              <span className="text-xl font-bold">Activación de cuenta</span>
               <span className="text-base font-light">
                 Puede revisar su correo eléctronico
               </span>

@@ -69,7 +69,10 @@ const LoginForm = () => {
         isRequired
         placeholder="••••••••••"
       />
-      <Link href={'/recovery'} className="transition-opacity ml-auto w-fit hover:opacity-80">
+      <Link
+        href={'/recovery'}
+        className="transition-opacity ml-auto w-fit hover:opacity-80"
+      >
         <small>{t('components.auth.forgot.recovery')}</small>
       </Link>
       <div className="w-full flex justify-center items-center">

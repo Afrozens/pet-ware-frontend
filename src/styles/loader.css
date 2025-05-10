@@ -1,4 +1,4 @@
-/* From Uiverse.io by rillala */ 
+/* From Uiverse.io by rillala */
 .spinner {
   position: absolute;
   width: 25px;
@@ -13,7 +13,7 @@
   transform: rotate(calc(var(--rotation) * 1deg))
     translate(0, calc(var(--translation) * 1%));
   animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
-  color: #4E3473;
+  color: #4e3473;
   text-align: end;
   font-weight: 700;
   font-size: 20px;
@@ -30,7 +30,7 @@
   background: transparent;
   top: 15px;
   left: -30px;
-  color: #46B4A9;
+  color: #46b4a9;
 }
 
 .spinner div:nth-child(2) {

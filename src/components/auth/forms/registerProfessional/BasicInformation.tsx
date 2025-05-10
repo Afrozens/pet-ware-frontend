@@ -10,32 +10,36 @@ import { montserrat } from '@/fonts';
 import { User } from '@/models/user';
 import { optionType } from '@/stub/optionStub';
 
-interface Value extends Pick<User, 'first_name' | 'last_name' | 'type_document' | 'document' | 'description'> {}
+interface Value
+  extends Pick<
+    User,
+    'first_name' | 'last_name' | 'type_document' | 'document' | 'description'
+  > {}
 
 interface Props {
-  handleNext: () => void
+  handleNext: () => void;
 }
 
 const BasicInformation = ({ handleNext }: Props) => {
-  const { 
-    control, 
-    register, 
+  const {
+    control,
+    register,
     watch,
-    formState: { errors } 
+    formState: { errors },
   } = useFormContext<Value>();
 
   const [firstName, lastName, docType, document, description] = watch([
-    'first_name', 
+    'first_name',
     'last_name',
-    'type_document', 
+    'type_document',
     'document',
     'description',
   ]);
 
-  const isFormComplete = 
-    firstName && 
-    lastName && 
-    docType && 
+  const isFormComplete =
+    firstName &&
+    lastName &&
+    docType &&
     document &&
     description &&
     description.length >= 20 &&
@@ -51,7 +55,7 @@ const BasicInformation = ({ handleNext }: Props) => {
       <p className={`${montserrat.className} -mt-5 text-gray-800 font-light`}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, impedit.
       </p>
-      
+
       <div className="container-inputs">
         <FieldInput
           rules={{
@@ -70,7 +74,7 @@ const BasicInformation = ({ handleNext }: Props) => {
             pattern: {
               value: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
               message: 'Solo se permiten letras',
-            }
+            },
           }}
           classAditional="w-full"
           label={'Nombre del profesional'}
@@ -81,7 +85,7 @@ const BasicInformation = ({ handleNext }: Props) => {
           placeholder="Rafael"
           isRequired
         />
-        
+
         <FieldInput
           rules={{
             required: {
@@ -99,7 +103,7 @@ const BasicInformation = ({ handleNext }: Props) => {
             pattern: {
               value: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
               message: 'Solo se permiten letras',
-            }
+            },
           }}
           classAditional="w-full"
           error={errors.last_name?.message}
@@ -111,14 +115,14 @@ const BasicInformation = ({ handleNext }: Props) => {
           isRequired
         />
       </div>
-      
+
       <div className="container-inputs w-full">
         <div className="md:grid w-full flex flex-col md:grid-cols-5 items-center gap-1">
           <Controller
             name="type_document"
             control={control}
             rules={{
-              required: 'El tipo de documento es requerido'
+              required: 'El tipo de documento es requerido',
             }}
             render={({ field, formState: { errors } }) => (
               <FieldSelect
@@ -138,7 +142,7 @@ const BasicInformation = ({ handleNext }: Props) => {
               />
             )}
           />
-          
+
           <FieldInput
             rules={{
               required: {
@@ -152,7 +156,7 @@ const BasicInformation = ({ handleNext }: Props) => {
               max: {
                 value: 9999999999,
                 message: 'Documento demasiado largo',
-              }
+              },
             }}
             error={errors.document?.message}
             classAditional="col-start-3 col-end-6"
@@ -166,7 +170,7 @@ const BasicInformation = ({ handleNext }: Props) => {
           />
         </div>
       </div>
-      
+
       <FieldDescription
         rules={{
           required: {
@@ -180,21 +184,17 @@ const BasicInformation = ({ handleNext }: Props) => {
           maxLength: {
             value: 500,
             message: 'Máximo 500 caracteres',
-          }
+          },
         }}
         register={register}
         error={errors.description?.message}
-        label={"Experiencia como profesional"} 
-        id="description" 
-        name="description" 
+        label={'Experiencia como profesional'}
+        id="description"
+        name="description"
       />
-      
+
       <div className="flex w-full justify-end">
-        <ButtonPrimary 
-          type="button"
-          onClick={handleNext}
-          disabled={!isFormComplete}
-        >
+        <ButtonPrimary type="button" onClick={handleNext} disabled={!isFormComplete}>
           Siguiente
         </ButtonPrimary>
       </div>

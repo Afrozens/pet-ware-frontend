@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 
-
 const useOpen = () => {
   const [isOpen, setIsOpen] = useState(false);
   const onClose = () => {

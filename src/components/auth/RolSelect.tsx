@@ -2,10 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import {
-    TeamOutlined,
-    UserOutlined,
-} from '@ant-design/icons';
+import { TeamOutlined, UserOutlined } from '@ant-design/icons';
 import { AntdIconProps } from '@ant-design/icons/lib/components/AntdIcon';
 
 import FieldSelectTab from '@/components/commons/fields/FieldSelectTab';

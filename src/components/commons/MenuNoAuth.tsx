@@ -14,12 +14,9 @@ const MenuNoAuth = () => {
       <div className="flex xl:text-lg whitespace-nowrap 2xl:text-xl items-center gap-2 xl:gap-5 2xl:gap-8">
         <ButtonRegister />
         <Link href={'/login'}>
-          <ButtonPrimary>
-              {t('login')}
-          </ButtonPrimary>
+          <ButtonPrimary>{t('login')}</ButtonPrimary>
         </Link>
       </div>
-      
     </>
   );
 };

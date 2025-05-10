@@ -19,7 +19,7 @@ export default getRequestConfig(async (params) => {
   // Add fallback to default locale if params.locale is missing
   const locale = params.locale || defaultLocale;
   const baseLocale = new Intl.Locale(locale).baseName;
-  
+
   if (!isValidLocale(baseLocale)) notFound();
 
   const messages = (await messageImports[baseLocale]()).default;

@@ -1,12 +1,12 @@
 'use client';
 
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
-import TranslateDropdown from "./TranslateDropdown";
-import MenuNoAuth from "./MenuNoAuth";
-import Image from "next/image";
+import TranslateDropdown from './TranslateDropdown';
+import MenuNoAuth from './MenuNoAuth';
+import Image from 'next/image';
 
 const Header = () => {
   const pathname = usePathname();
@@ -14,8 +14,17 @@ const Header = () => {
 
   return (
     <header className="absolute top-0 z-[999] bg-transparent flex w-full p-10 2xl:px-20 items-center justify-between h-[51px]">
-      <Link href="/" className="hover:opacity-80 text-3xl transition-opacity w-fit md:w-56">
-        <Image src={'/logotype.svg'} alt="pet image reference" className="-rotate-45" width={50} height={50} />
+      <Link
+        href="/"
+        className="hover:opacity-80 text-3xl transition-opacity w-fit md:w-56"
+      >
+        <Image
+          src={'/logotype.svg'}
+          alt="pet image reference"
+          className="-rotate-45"
+          width={50}
+          height={50}
+        />
       </Link>
       <nav
         className={`hidden xl:flex flex-grow justify-center text-base xl:text-lg 2xl:text-xl font-light gap-10 ${pathname.startsWith('/dashboard/') ? 'text-black' : 'text-white'}`}
@@ -34,7 +43,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -7,7 +7,6 @@ import { useTranslations } from 'next-intl';
 import FieldSelect from '../commons/fields/FieldSelect';
 import { optionLocation, optionPet, optionService } from '@/stub/optionStub';
 
-
 const Search = () => {
   const t = useTranslations('components.search-general');
   const [visibleOne, setVisibleOne] = useState(false);
@@ -18,13 +17,13 @@ const Search = () => {
     {
       label: (
         <div className="w-full bg-transparent h-fit rounded-xl">
-            <FieldSelect
-              options={optionService}
-              label={t('one.label')}
-              id={t('one.label')}
-              isMultiple={false}
-              name={t('one.label')}
-            />
+          <FieldSelect
+            options={optionService}
+            label={t('one.label')}
+            id={t('one.label')}
+            isMultiple={false}
+            name={t('one.label')}
+          />
         </div>
       ),
       key: '0',
@@ -35,13 +34,13 @@ const Search = () => {
     {
       label: (
         <div className="w-full bg-transparent h-fit rounded-xl">
-            <FieldSelect
-              options={optionLocation}
-              label={t('second.label')}
-              id={t('second.label')}
-              isMultiple={false}
-              name={t('second.label')}
-            />
+          <FieldSelect
+            options={optionLocation}
+            label={t('second.label')}
+            id={t('second.label')}
+            isMultiple={false}
+            name={t('second.label')}
+          />
         </div>
       ),
       key: '0',
@@ -52,13 +51,13 @@ const Search = () => {
     {
       label: (
         <div className="w-full bg-transparent h-fit rounded-xl">
-            <FieldSelect
-              options={optionPet}
-              label={t('third.label')}
-              id={t('third.label')}
-              isMultiple={false}
-              name={t('third.label')}
-            />
+          <FieldSelect
+            options={optionPet}
+            label={t('third.label')}
+            id={t('third.label')}
+            isMultiple={false}
+            name={t('third.label')}
+          />
         </div>
       ),
       key: '0',
@@ -92,7 +91,7 @@ const Search = () => {
             {t('one.title')}
           </span>
           <span className="text-sm md:text-base flex gap-2 items-center -mt-2 font-light">
-            {t('one.label')} <DownOutlined className='text-lg' />
+            {t('one.label')} <DownOutlined className="text-lg" />
           </span>
         </div>
       </Dropdown>
@@ -104,7 +103,7 @@ const Search = () => {
         open={visibleSecond}
         onOpenChange={(open, info) => {
           if (info?.source === 'trigger') {
-            setVisibleSecond(open)
+            setVisibleSecond(open);
           }
         }}
       >
@@ -116,7 +115,7 @@ const Search = () => {
             {t('second.title')}
           </span>
           <span className="text-sm md:text-base flex gap-2 items-center -mt-2 font-light">
-            {t('second.label')} <DownOutlined className='text-lg' />
+            {t('second.label')} <DownOutlined className="text-lg" />
           </span>
         </div>
       </Dropdown>
@@ -128,7 +127,7 @@ const Search = () => {
         open={visibleThird}
         onOpenChange={(open, info) => {
           if (info?.source === 'trigger') {
-            setVisibleThird(open)
+            setVisibleThird(open);
           }
         }}
       >
@@ -140,26 +139,29 @@ const Search = () => {
             {t('third.title')}
           </span>
           <span className="text-sm md:text-base flex gap-2 items-center -mt-2 font-light">
-           {t('third.label')} <DownOutlined className='text-lg' />
+            {t('third.label')} <DownOutlined className="text-lg" />
           </span>
         </div>
       </Dropdown>
 
-      <button type='button' className="cursor-pointer bg-success-pressed text-white hover:opacity-80 flex justify-center items-center rounded-full p-3 w-16 h-16 xl:absolute xl:top-1/2 xl:-translate-y-1/2 xl:-right-4">
+      <button
+        type="button"
+        className="cursor-pointer bg-success-pressed text-white hover:opacity-80 flex justify-center items-center rounded-full p-3 w-16 h-16 xl:absolute xl:top-1/2 xl:-translate-y-1/2 xl:-right-4"
+      >
         <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="#fff"
-            className="size-14"
-            >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-            />
-            </svg>
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="#fff"
+          className="size-14"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
       </button>
     </div>
   );

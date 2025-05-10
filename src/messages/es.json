@@ -1,105 +1,105 @@
 {
-    "hello": "Hola",
-    "input": {
-        "password": "Contraseña",
-        "confirm-password": "Confirmar Contraseña",
-        "email": "Correo eléctronico"
-    },
-    "categories": {
-        "dog-walking": "Paseo de perros",
-        "dog-walking-description": "Servicio de paseo para perros de todas las razas y tamaños.",
-        "dog-daycare": "Guardería canina",
-        "dog-daycare-description": "Cuidado diurno o nocturno para perros en un ambiente seguro y divertido.",
-        "bath-and-grooming": "Baño y grooming",
-        "bath-and-grooming-description": "Servicio de baño, corte de pelo y cuidado estético para mascotas.",
-        "basic-training": "Adiestramiento básico",
-        "basic-training-description": "Entrenamiento básico de obediencia para perros.",
-        "cat-care": "Cuidado de gatos",
-        "cat-care-description": "Servicio de cuidado y atención para gatos en su hogar.",
-        "veterinary-visit": "Visita veterinaria",
-        "veterinary-visit-description": "Acompañamiento y transporte para visitas al veterinario.",
-        "animal-physiotherapy": "Fisioterapia animal",
-        "animal-physiotherapy-description": "Terapias físicas para la recuperación de lesiones en animales.",
-        "emergency-service": "Servicio de emergencia",
-        "emergency-service-description": "Atención y cuidado de emergencia para mascotas.",
-        "pet-accommodation": "Alojamiento para mascotas",
-        "pet-accommodation-description": "Alojamiento cómodo y seguro para mascotas durante viajes.",
-        "pet-transport": "Transporte de mascotas",
-        "pet-transport-description": "Servicio de transporte seguro para mascotas a cualquier destino.",
-        "bird-care": "Cuidado de aves",
-        "bird-care-description": "Atención y cuidado especializado para aves domésticas.",
-        "reptile-care": "Cuidado de reptiles",
-        "reptile-care-description": "Servicio especializado para el cuidado de reptiles.",
-        "feline-grooming": "Peluquería felina",
-        "feline-grooming-description": "Servicio de grooming especializado para gatos.",
-        "advanced-training": "Entrenamiento avanzado",
-        "advanced-training-description": "Entrenamiento avanzado para perros con necesidades específicas.",
-        "pet-spa-service": "Servicio de spa para mascotas",
-        "pet-spa-service-description": "Servicio de relajación y cuidado premium para mascotas.",
-        "fish-care": "Cuidado de peces",
-        "fish-care-description": "Mantenimiento y cuidado de acuarios y peces.",
-        "pet-photography-service": "Servicio de fotografía para mascotas",
-        "pet-photography-service-description": "Sesiones fotográficas profesionales para mascotas.",
-        "exotic-animal-care": "Cuidado de animales exóticos",
-        "exotic-animal-care-description": "Atención especializada para animales exóticos y no convencionales.",
-        "habitat-cleaning-service": "Servicio de limpieza de hábitats",
-        "habitat-cleaning-service-description": "Limpieza y mantenimiento de hábitats para todo tipo de mascotas.",
-        "specialized-feeding-service": "Servicio de alimentación especializada",
-        "specialized-feeding-service-description": "Preparación y suministro de dietas especiales para mascotas."
+  "hello": "Hola",
+  "input": {
+    "password": "Contraseña",
+    "confirm-password": "Confirmar Contraseña",
+    "email": "Correo eléctronico"
+  },
+  "categories": {
+    "dog-walking": "Paseo de perros",
+    "dog-walking-description": "Servicio de paseo para perros de todas las razas y tamaños.",
+    "dog-daycare": "Guardería canina",
+    "dog-daycare-description": "Cuidado diurno o nocturno para perros en un ambiente seguro y divertido.",
+    "bath-and-grooming": "Baño y grooming",
+    "bath-and-grooming-description": "Servicio de baño, corte de pelo y cuidado estético para mascotas.",
+    "basic-training": "Adiestramiento básico",
+    "basic-training-description": "Entrenamiento básico de obediencia para perros.",
+    "cat-care": "Cuidado de gatos",
+    "cat-care-description": "Servicio de cuidado y atención para gatos en su hogar.",
+    "veterinary-visit": "Visita veterinaria",
+    "veterinary-visit-description": "Acompañamiento y transporte para visitas al veterinario.",
+    "animal-physiotherapy": "Fisioterapia animal",
+    "animal-physiotherapy-description": "Terapias físicas para la recuperación de lesiones en animales.",
+    "emergency-service": "Servicio de emergencia",
+    "emergency-service-description": "Atención y cuidado de emergencia para mascotas.",
+    "pet-accommodation": "Alojamiento para mascotas",
+    "pet-accommodation-description": "Alojamiento cómodo y seguro para mascotas durante viajes.",
+    "pet-transport": "Transporte de mascotas",
+    "pet-transport-description": "Servicio de transporte seguro para mascotas a cualquier destino.",
+    "bird-care": "Cuidado de aves",
+    "bird-care-description": "Atención y cuidado especializado para aves domésticas.",
+    "reptile-care": "Cuidado de reptiles",
+    "reptile-care-description": "Servicio especializado para el cuidado de reptiles.",
+    "feline-grooming": "Peluquería felina",
+    "feline-grooming-description": "Servicio de grooming especializado para gatos.",
+    "advanced-training": "Entrenamiento avanzado",
+    "advanced-training-description": "Entrenamiento avanzado para perros con necesidades específicas.",
+    "pet-spa-service": "Servicio de spa para mascotas",
+    "pet-spa-service-description": "Servicio de relajación y cuidado premium para mascotas.",
+    "fish-care": "Cuidado de peces",
+    "fish-care-description": "Mantenimiento y cuidado de acuarios y peces.",
+    "pet-photography-service": "Servicio de fotografía para mascotas",
+    "pet-photography-service-description": "Sesiones fotográficas profesionales para mascotas.",
+    "exotic-animal-care": "Cuidado de animales exóticos",
+    "exotic-animal-care-description": "Atención especializada para animales exóticos y no convencionales.",
+    "habitat-cleaning-service": "Servicio de limpieza de hábitats",
+    "habitat-cleaning-service-description": "Limpieza y mantenimiento de hábitats para todo tipo de mascotas.",
+    "specialized-feeding-service": "Servicio de alimentación especializada",
+    "specialized-feeding-service-description": "Preparación y suministro de dietas especiales para mascotas."
+  },
+  "components": {
+    "home": "Inicio",
+    "auth": {
+      "register-title": "Regístrate como profesional",
+      "register-description": "Inicia indicando que el registro es solo para profesionales (veterinarios, cuidadores, etc.)",
+      "forgot": {
+        "recovery": "¿Ha olvidado su contraseña?"
       },
-    "components": {
-        "home": "Inicio",
-        "auth": {
-            "register-title": "Regístrate como profesional",
-            "register-description": "Inicia indicando que el registro es solo para profesionales (veterinarios, cuidadores, etc.)",
-            "forgot": {
-                "recovery": "¿Ha olvidado su contraseña?"
-            },
-            "back": "¿Quieres volver?",
-            "login-title": "Bienvenido de vuelta a tu comunidad pet-friendly",
-            "login-description": "Inicia sesión para conectar con los mejores cuidadores y veterinarios, o gestionar tus servicios profesionales. En Pata Mia, cada mascota recibe el amor y cuidado que se merece.",
-            "login": "Iniciar sesión",
-            "register": "Registrate"
-        },
-        "hero-section": {
-            "i-professional": "Soy profesional",
-            "search-professional": "Busco profesionales",
-            "one-place": "en un solo lugar",
-            "services": "servicios especializados y todo lo que tu mascota necesita",
-            "find-verified": "Encuentra profesionales verificados en",
-            "directly": "directamente en tu",
-            "home": "hogar",
-            "you": "tus",
-            "pet": "mascotas",
-            "professionals": "Profesionales",
-            "for": "para"
-        },
-        "search-general": {
-            "one": {
-                "title": "Tipo de servicio",
-                "label": "Selecciona tu servicio"
-            },
-            "second": {
-                "title": "Ubicación",
-                "label": "Selecciona tu ubicación"
-            },
-            "third": {
-                "title": "Tipo de mascota",
-                "label": "Selecciona tu mascota"
-            }
-        },
-        "translate-dropdown": {
-            "english": "Inglés",
-            "spanish": "Español"
-        },
-        "footer": {
-            "explore": "Explora",
-            "reserved": "Todos los derechos reservados",
-            "conditions": "Términos y Condiciones",
-            "data": "Políticas de tratamiento de datos",
-            "terms": "Términos Legales",
-            "contact": "Contáctanos",
-            "follow": "¡Siguenos!"
-        }
+      "back": "¿Quieres volver?",
+      "login-title": "Bienvenido de vuelta a tu comunidad pet-friendly",
+      "login-description": "Inicia sesión para conectar con los mejores cuidadores y veterinarios, o gestionar tus servicios profesionales. En Pata Mia, cada mascota recibe el amor y cuidado que se merece.",
+      "login": "Iniciar sesión",
+      "register": "Registrate"
+    },
+    "hero-section": {
+      "i-professional": "Soy profesional",
+      "search-professional": "Busco profesionales",
+      "one-place": "en un solo lugar",
+      "services": "servicios especializados y todo lo que tu mascota necesita",
+      "find-verified": "Encuentra profesionales verificados en",
+      "directly": "directamente en tu",
+      "home": "hogar",
+      "you": "tus",
+      "pet": "mascotas",
+      "professionals": "Profesionales",
+      "for": "para"
+    },
+    "search-general": {
+      "one": {
+        "title": "Tipo de servicio",
+        "label": "Selecciona tu servicio"
+      },
+      "second": {
+        "title": "Ubicación",
+        "label": "Selecciona tu ubicación"
+      },
+      "third": {
+        "title": "Tipo de mascota",
+        "label": "Selecciona tu mascota"
+      }
+    },
+    "translate-dropdown": {
+      "english": "Inglés",
+      "spanish": "Español"
+    },
+    "footer": {
+      "explore": "Explora",
+      "reserved": "Todos los derechos reservados",
+      "conditions": "Términos y Condiciones",
+      "data": "Políticas de tratamiento de datos",
+      "terms": "Términos Legales",
+      "contact": "Contáctanos",
+      "follow": "¡Siguenos!"
     }
+  }
 }

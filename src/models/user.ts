@@ -1,4 +1,4 @@
-import { DateAt } from "./commons";
+import { DateAt } from './commons';
 
 export type typeRole = 'admin' | 'client' | 'professional';
 

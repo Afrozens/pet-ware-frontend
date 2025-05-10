@@ -1,49 +1,49 @@
 @import url('./loader.css');
 @import url('./input.css');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* success colors  */
-  --color-success-pressed: #4BBFB4; 
-  --color-success-primary: #46B4A9; 
-  --color-success-bg: #DEFFFC; 
-  --color-success-focus: #A1F5ED; 
-  --color-success-border: #67EBDE;
-  --color-success-hover: #30DECE;
+  --color-success-pressed: #4bbfb4;
+  --color-success-primary: #46b4a9;
+  --color-success-bg: #defffc;
+  --color-success-focus: #a1f5ed;
+  --color-success-border: #67ebde;
+  --color-success-hover: #30dece;
 
   /* warning colors */
-  --color-warning-pressed: #F2A03D; 
-  --color-warning-primary: #F2B035; 
-  --color-warning-bg: #FFEBC6; 
-  --color-warning-focus: #FFDCB1; 
-  --color-warning-border: #FFC682;
-  --color-warning-hover: #FFB55B;
+  --color-warning-pressed: #f2a03d;
+  --color-warning-primary: #f2b035;
+  --color-warning-bg: #ffebc6;
+  --color-warning-focus: #ffdcb1;
+  --color-warning-border: #ffc682;
+  --color-warning-hover: #ffb55b;
 
   /* danger colors */
-  --color-danger-pressed: #B90209; 
-  --color-danger-primary: #DC3545; 
-  --color-danger-bg: #FEEDEE; 
-  --color-danger-focus: #F0B3B6; 
-  --color-danger-border: #E88D91;
-  --color-danger-hover: #E1676C;
+  --color-danger-pressed: #b90209;
+  --color-danger-primary: #dc3545;
+  --color-danger-bg: #feedee;
+  --color-danger-focus: #f0b3b6;
+  --color-danger-border: #e88d91;
+  --color-danger-hover: #e1676c;
 
   /* primary colors */
-  --color-primary-pressed: #432073; 
-  --color-primary-main: #4E3473; 
-  --color-primary-hover: #9C55F6;
-  --color-primary-border: #C0BBF4; 
-  --color-primary-focus: #D7C9FF; 
-  --color-primary-bg: #E8E7FD;
-  --color-primary-secondary: #F9F4FF;
+  --color-primary-pressed: #432073;
+  --color-primary-main: #4e3473;
+  --color-primary-hover: #9c55f6;
+  --color-primary-border: #c0bbf4;
+  --color-primary-focus: #d7c9ff;
+  --color-primary-bg: #e8e7fd;
+  --color-primary-secondary: #f9f4ff;
 
   /* text & icons colors */
-  --color-text-primary: #0A0A0A;
+  --color-text-primary: #0a0a0a;
   --color-text-description-primary: #424242;
   --color-text-disabled: #616161;
   --color-icon-hover: #757575;
-  --color-text-placeholder: #9E9E9E;
-  --color-icon-primary: #C2C2C2;
+  --color-text-placeholder: #9e9e9e;
+  --color-icon-primary: #c2c2c2;
 }
 
 @tailwind utilities;
@@ -52,48 +52,47 @@
   .btn-ghost {
     @apply inline-flex cursor-pointer items-center justify-center gap-2 whitespace-pre rounded-lg px-6 py-2 text-sm font-medium transition-all hover:bg-gray-300 hover:text-gray-700;
   }
-  
+
   /* footer */
   .footer-link {
     @apply hover:opacity-80 hover:scale-105 transition-all flex gap-2 items-center;
   }
 
-    /* forms */
-    .form-initial {
-      @apply flex w-full max-w-xl flex-col gap-2 lg:gap-4;
-    }
+  /* forms */
+  .form-initial {
+    @apply flex w-full max-w-xl flex-col gap-2 lg:gap-4;
+  }
 
-    .base-form {
-      @apply mt-4 flex w-full flex-col items-center justify-center gap-4 px-7;
-    }
+  .base-form {
+    @apply mt-4 flex w-full flex-col items-center justify-center gap-4 px-7;
+  }
 
-    .form-title {
-      @apply mb-4 text-center text-3xl font-semibold leading-none tracking-tight;
-    }
-  
-    .form-subtitle {
-      @apply mb-8 border-b max-w-3xl pb-8 text-center text-base font-normal opacity-80;
-    }
+  .form-title {
+    @apply mb-4 text-center text-3xl font-semibold leading-none tracking-tight;
+  }
 
-    .title-information {
-      @apply text-3xl xl:text-5xl px-1 xl:px-0 font-bold;
-    }
-  
-    .paragraph-information {
-      @apply text-base md:text-lg xl:text-xl px-10 text-center xl:text-start;
-    }
-  
-    .container-information {
-      @apply container mb-10 self-center gap-10 w-full flex flex-col justify-center items-center text-center;
-    }
+  .form-subtitle {
+    @apply mb-8 border-b max-w-3xl pb-8 text-center text-base font-normal opacity-80;
+  }
 
-    .container-inputs {
-      @apply flex w-full items-center justify-between gap-4;
-    }
-  
+  .title-information {
+    @apply text-3xl xl:text-5xl px-1 xl:px-0 font-bold;
+  }
+
+  .paragraph-information {
+    @apply text-base md:text-lg xl:text-xl px-10 text-center xl:text-start;
+  }
+
+  .container-information {
+    @apply container mb-10 self-center gap-10 w-full flex flex-col justify-center items-center text-center;
+  }
+
+  .container-inputs {
+    @apply flex w-full items-center justify-between gap-4;
+  }
+
   /* lobby  */
   .container-field {
     @apply w-full pl-8 py-2 gap-2 h-full text-lg text-black transition-all cursor-pointer hover:bg-primary-bg flex flex-col rounded-[58px];
   }
-
 }

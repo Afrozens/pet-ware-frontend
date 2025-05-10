@@ -8,37 +8,34 @@ import RegisterClientForm from '@/components/auth/forms/RegisterClientForm';
 import ButtonPrimary from './ButtonPrimary';
 
 interface Props {
-    defaultButton?: boolean
+  defaultButton?: boolean;
 }
 
 const ButtonRegister = ({ defaultButton = false }: Props) => {
-    const t = useTranslations('components.auth');
-    const { onOpen, onClose, isOpen } = useOpen();
+  const t = useTranslations('components.auth');
+  const { onOpen, onClose, isOpen } = useOpen();
   return (
     <>
-    {defaultButton ? (
-        <ButtonPrimary
-        onClick={onOpen}
-        type='button'
-        >
-            {t('register')}
+      {defaultButton ? (
+        <ButtonPrimary onClick={onOpen} type="button">
+          {t('register')}
         </ButtonPrimary>
-    ) : (
+      ) : (
         <button
           onClick={onOpen}
-          type='button'
+          type="button"
           className="cursor-pointer underline hover:opacity-80 transition-opacity flex items-center"
         >
-            {t('register')}
+          {t('register')}
         </button>
-    )}
-        {isOpen ? (
-            <StructuredModal open={isOpen} onClose={onClose}>
-              <RegisterClientForm onClose={onClose} />
-            </StructuredModal>
-          ) : null}
+      )}
+      {isOpen ? (
+        <StructuredModal open={isOpen} onClose={onClose}>
+          <RegisterClientForm onClose={onClose} />
+        </StructuredModal>
+      ) : null}
     </>
-  )
-}
+  );
+};
 
-export default ButtonRegister
+export default ButtonRegister;

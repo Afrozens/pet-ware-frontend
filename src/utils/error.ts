@@ -1,4 +1,4 @@
-import { AxiosError } from "axios";
+import { AxiosError } from 'axios';
 
 /**
  * Handles and formats Axios errors from API responses
@@ -17,9 +17,8 @@ import { AxiosError } from "axios";
  * }
  */
 export const formatedErrorServices = (error: any): string => {
-    const err = error as AxiosError;
-    console.error(err);
-    const messageClient = (err.response?.data as any).detail;
-    throw messageClient;
-  };
-  
+  const err = error as AxiosError;
+  console.error(err);
+  const messageClient = (err.response?.data as any).detail;
+  throw messageClient;
+};

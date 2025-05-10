@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useRef, useState, useEffect, useId } from "react";
-import { motion } from "motion/react";
+import { useRef, useState, useEffect, useId } from 'react';
+import { motion } from 'motion/react';
 
 export interface FlipTextProps {
   words?: string[];
@@ -10,7 +10,7 @@ export interface FlipTextProps {
 }
 
 export function FlipText({
-  words = ["better", "modern", "beautiful", "awesome"],
+  words = ['better', 'modern', 'beautiful', 'awesome'],
   interval = 3000,
   animationDuration = 700,
 }: FlipTextProps) {
@@ -54,23 +54,23 @@ export function FlipText({
       <motion.div
         transition={{
           duration: animationDuration / 1000,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
-        className={"inline-block"}
+        className={'inline-block'}
         ref={textRef}
         layoutId={`word-div-${words[currentWordIndex]}-${id}`}
       >
         <motion.div className="w-48 flex gap-1">
-          {words[currentWordIndex].split("").map((letter, index) => (
+          {words[currentWordIndex].split('').map((letter, index) => (
             <motion.span
               key={index}
               initial={{
                 opacity: 0,
-                filter: "blur(10px)",
+                filter: 'blur(10px)',
               }}
               animate={{
                 opacity: 1,
-                filter: "blur(0px)",
+                filter: 'blur(0px)',
               }}
               transition={{
                 delay: index * 0.02,

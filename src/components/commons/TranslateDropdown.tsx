@@ -58,9 +58,7 @@ const TranslateDropdown = () => {
       placement="bottomRight"
     >
       <button type="button" className="w-fit px-2 btn-ghost text-white">
-        <GlobalOutlined
-          className={`text-lg text-white`}
-        />
+        <GlobalOutlined className={`text-lg text-white`} />
       </button>
     </Dropdown>
   );
