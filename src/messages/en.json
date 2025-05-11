@@ -56,7 +56,9 @@
   },
   "validates": {
       "success": {
-        "register-professional": "The professional registration was successful"
+        "register-professional": "Professional registered successfully",
+        "activation-required": "Please activate your account to continue.",
+        "check-email": "We've sent an activation link to your email address. Please check your inbox and click on the link to activate your account."
       },
       "required": "This field is required",
       "min-length": "Minimum {value} characters",

@@ -13,11 +13,13 @@ import BasicInformation from './registerProfessional/BasicInformation';
 import { SignUpProfessional } from '@/models/auth';
 import useSubmit from '@/hooks/useSubmit';
 import AuthService from '@/services/AuthService';
+import MsgSuccess from './registerProfessional/MsgSuccess';
 
 const RegisterProfessionalForm = () => {
   const authService = new AuthService();  
   const { token } = theme.useToken();
   const form = useForm();
+  const [isSuccess, setIsSuccess] = useState(false);
   const t = useTranslations('components.register-professional')
   const tSuccess = useTranslations('validates.success')
   const [currentStep, setCurrentStep] = useState(0);
@@ -33,6 +35,7 @@ const RegisterProfessionalForm = () => {
 
   const onSubmit: SubmitHandler<SignUpProfessional> = async (data) => {
     await doSubmit({data, callback: authService.registerProfessional})
+    setIsSuccess(true);
   }
 
   const handleNext = () => {
@@ -83,6 +86,10 @@ const RegisterProfessionalForm = () => {
   ];
 
   return (
+    <>
+    {isSuccess ? (
+      <MsgSuccess />
+    ) : (
     <FormProvider {...form}>
       <div className="flex flex-col max-w-3xl gap-5 mb-10 -mt-5 items-center justify-center w-full h-full">
         <Steps
@@ -101,6 +108,8 @@ const RegisterProfessionalForm = () => {
         />
       </div>
     </FormProvider>
+    )}
+    </>
   );
 };
 
