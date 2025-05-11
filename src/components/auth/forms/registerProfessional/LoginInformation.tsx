@@ -1,26 +1,30 @@
 'use client';
 
-import { SubmitHandler, useFormContext } from 'react-hook-form';
+import { useFormContext } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 
 import FieldInput from '@/components/commons/fields/FieldInput';
 import { montserrat } from '@/fonts';
 import ButtonPrimary from '@/components/commons/buttons/ButtonPrimary';
+import { SignUpProfessional } from '@/models/auth';
+
+interface Value extends Pick<SignUpProfessional, 'confirm_password' | 'password'> {}
 
 interface Props {
   handlePrev: () => void;
+  isLoading: boolean
 }
 
-const LoginInformation = ({ handlePrev }: Props) => {
+const LoginInformation = ({ handlePrev, isLoading }: Props) => {
   const t = useTranslations('components.register-professional');
   const tInput = useTranslations('input');
-  const tv = useTranslations('components.register-professional.validates');
+  const tv = useTranslations('validates');
   
   const {
     register,
     watch,
     formState: { errors },
-  } = useFormContext();
+  } = useFormContext<Value>();
 
   const [password, confirmPassword] = watch(['password', 'confirm_password']);
 
@@ -80,11 +84,15 @@ const LoginInformation = ({ handlePrev }: Props) => {
       </div>
 
       <div className="flex w-full justify-between">
-        <ButtonPrimary type="button" onClick={handlePrev}>
+        <ButtonPrimary 
+        type="button"
+        loading={isLoading} 
+        onClick={handlePrev}>
           {t('back')}
         </ButtonPrimary>
         <ButtonPrimary 
           type="submit"
+          loading={isLoading}
           disabled={!isFormComplete}
         >
           {t('finish')}

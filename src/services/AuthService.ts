@@ -1,5 +1,5 @@
 import axios from './instance';
-import { SignIn, SignInResponse } from '@/models/auth';
+import { SignIn, SignInResponse, SignUpProfessional } from '@/models/auth';
 import { formatedErrorServices } from '@/utils/error';
 
 /**
@@ -42,6 +42,24 @@ class AuthService {
       throw formatedErrorServices(error);
     }
   };
+
+  /**
+   * Registers a new professional account
+   * @param {SignUpProfessional} dataOutside - Professional registration data
+   * @throws {Error} When registration fails
+   */
+  registerProfessional = async (dataOutside: SignUpProfessional) => {
+    try {
+      const data = {
+        ...dataOutside,
+        email: dataOutside.email.toLowerCase(),
+        first_name: dataOutside.first_name.toLowerCase(),
+        last_name: dataOutside.last_name.toLowerCase(),
+      }
+    } catch (error) {
+      throw formatedErrorServices(error);
+    }
+  }
 }
 
 export default AuthService;

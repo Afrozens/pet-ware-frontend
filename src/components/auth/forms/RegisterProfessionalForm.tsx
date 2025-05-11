@@ -1,33 +1,38 @@
 'use client';
 
-import { useState } from 'react';
+import { CSSProperties, useState } from 'react';
 import { CaretRightOutlined } from '@ant-design/icons';
 import { Collapse, Steps, theme } from 'antd';
 import { CollapseProps } from 'antd/lib';
-import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
+import { FieldValues, FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { useTranslations } from 'next-intl';
 
 import LoginInformation from './registerProfessional/LoginInformation';
 import ContactInformation from './registerProfessional/ContactInformation';
 import BasicInformation from './registerProfessional/BasicInformation';
-import ButtonPrimary from '@/components/commons/buttons/ButtonPrimary';
+import { SignUpProfessional } from '@/models/auth';
+import useSubmit from '@/hooks/useSubmit';
+import AuthService from '@/services/AuthService';
 
 const RegisterProfessionalForm = () => {
+  const authService = new AuthService();  
   const { token } = theme.useToken();
   const form = useForm();
   const t = useTranslations('components.register-professional')
+  const tSuccess = useTranslations('validates.success')
   const [currentStep, setCurrentStep] = useState(0);
+  const { doSubmit, isLoading } = useSubmit<SignUpProfessional, void>(tSuccess('register-professional'))
   const [activePanels, setActivePanels] = useState<string[]>(['1']);
 
-  const panelStyle: React.CSSProperties = {
+  const panelStyle: CSSProperties = {
     marginBottom: 24,
     background: '#fafafa',
     borderRadius: token.borderRadiusLG,
     border: 'none',
   };
 
-  const onSubmit: SubmitHandler<any> = async (data) => {
-    console.log(data, 'asd')
+  const onSubmit: SubmitHandler<SignUpProfessional> = async (data) => {
+    await doSubmit({data, callback: authService.registerProfessional})
   }
 
   const handleNext = () => {
@@ -58,8 +63,8 @@ const RegisterProfessionalForm = () => {
     {
       key: '3',
       label: t('third-step.title'),
-      children: <form onSubmit={form.handleSubmit(onSubmit)}>
-          <LoginInformation handlePrev={handlePrev} />
+      children: <form onSubmit={form.handleSubmit(onSubmit as SubmitHandler<FieldValues>)}>
+          <LoginInformation isLoading={isLoading} handlePrev={handlePrev} />
         </form>,
       style: panelStyle,
     },

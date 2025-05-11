@@ -1,8 +1,12 @@
+import { User } from "./user";
+
 export interface SignIn {
   email: string;
   password: string;
   confirm_password?: string;
 }
+
+export interface SignUpProfessional extends Pick<User, 'last_name' | 'first_name' | 'address' | 'phone_number' | 'email' | 'type_document' | 'document' | 'description'>, Pick<SignIn, 'confirm_password' | 'password'> {}
 
 export interface PasswordReset {
   password: string;

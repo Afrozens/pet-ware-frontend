@@ -1,16 +1,17 @@
 'use client';
 
 import { Controller, useFormContext } from 'react-hook-form';
+import { useTranslations } from 'next-intl';
+
 import ButtonPrimary from '@/components/commons/buttons/ButtonPrimary';
 import FieldDescription from '@/components/commons/fields/FieldDescription';
 import FieldInput from '@/components/commons/fields/FieldInput';
 import FieldSelect from '@/components/commons/fields/FieldSelect';
 import { montserrat } from '@/fonts';
-import { User } from '@/models/user';
 import { optionType } from '@/stub/optionStub';
-import { useTranslations } from 'next-intl';
+import { SignUpProfessional } from '@/models/auth';
 
-interface Value extends Pick<User, 'first_name' | 'last_name' | 'type_document' | 'document' | 'description'> {}
+interface Value extends Pick<SignUpProfessional, 'first_name' | 'last_name' | 'type_document' | 'document' | 'description'> {}
 
 interface Props {
   handleNext: () => void;

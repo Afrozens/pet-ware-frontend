@@ -55,6 +55,9 @@
     "specialized-feeding-service-description": "Preparation and supply of special diets for pets."
   },
   "validates": {
+      "success": {
+        "register-professional": "The professional registration was successful"
+      },
       "required": "This field is required",
       "min-length": "Minimum {value} characters",
       "max-length": "Maximum {value} characters",

@@ -1,15 +1,16 @@
 'use client';
 
 import { Controller, useFormContext } from 'react-hook-form';
+import { useTranslations } from 'next-intl';
+
 import { montserrat } from '@/fonts';
 import FieldAutoComplete from '@/components/commons/fields/FieldAutoComplete';
 import FieldInput from '@/components/commons/fields/FieldInput';
 import FieldPhone from '@/components/commons/fields/FieldPhone';
 import ButtonPrimary from '@/components/commons/buttons/ButtonPrimary';
-import { User } from '@/models/user';
-import { useTranslations } from 'next-intl';
+import { SignUpProfessional } from '@/models/auth';
 
-interface Value extends Pick<User, 'address' | 'phone_number' | 'email'> {}
+interface Value extends Pick<SignUpProfessional, 'address' | 'phone_number' | 'email'> {}
 
 interface Props {
   handlePrev: () => void;
@@ -19,7 +20,7 @@ interface Props {
 const ContactInformation = ({ handleNext, handlePrev }: Props) => {
   const t = useTranslations('components.register-professional');
   const tInput = useTranslations('input');
-  const tv = useTranslations('components.register-professional.validates');
+  const tv = useTranslations('validates');
   
   const {
     setValue,
