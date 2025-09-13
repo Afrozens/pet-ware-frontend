@@ -61,6 +61,7 @@
         "activation-required": "Por favor activa tu cuenta para continuar.",
       "check-email": "Hemos enviado un enlace de activación a tu dirección de correo electrónico. Por favor revisa tu bandeja de entrada y haz clic en el enlace para activar tu cuenta."
       },
+      "email": "Email",
       "required": "Este campo es requerido",
       "min-length": "Mínimo {value} caracteres",
       "max-length": "Máximo {value} caracteres",
@@ -72,7 +73,9 @@
       "phone-invalid": "Por favor ingresa un número de teléfono válido",
       "address-required": "La dirección es requerida",
       "password-requirements": "La contraseña debe contener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial",
-      "passwords-match": "Las contraseñas deben coincidir"
+      "passwords-match": "Las contraseñas deben coincidir",
+      "password-required": "La contraseña es requerida",
+      "password-eight": "La contraseña debe tener al menos 8 caracteres"
     },
   "components": {
     "register-professional": {
@@ -144,6 +147,20 @@
       "terms": "Términos Legales",
       "contact": "Contáctanos",
       "follow": "¡Siguenos!"
-    }
+    },
+    "register-client": {
+      "register-now": "Registrate ahora",
+      "description": "Seremos los intermediarios para ayudar a tu mascota, juntos.",
+      "register-client": "Registrate",
+      "already-have-account": "¿Ya tienes una cuenta?",
+      "sign-in": "Iniciar sesión",
+      "accept-terms": "Al registrarte aceptas los",
+      "terms-and-conditions": "términos y condiciones",
+      "return": "volver",
+      "activation": "Activación de cuenta",
+      "check": "Puede revisar su correo eléctronico",
+      "successful-account": "Te has registrado como cliente",
+      "complete-information": "Debe completar la información"
+   }
   }
 }

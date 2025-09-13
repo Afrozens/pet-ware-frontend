@@ -6,7 +6,6 @@ import { LeftOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-
 import RolSelect from '@/components/auth/RolSelect';
 import FieldInput from '@/components/commons/fields/FieldInput';
 import ButtonPrimary from '@/components/commons/buttons/ButtonPrimary';
@@ -23,13 +22,16 @@ interface Props {
 }
 
 const RegisterClientForm = ({ onClose }: Props) => {
-  const authService = new AuthService();
-  const t = useTranslations('');
-  const [isStart, setIsStart] = useState(false);
+  const authService             = new AuthService();
+  const tInput                  = useTranslations('input');
+  const tValidates              = useTranslations('validates');
+  const tClient                 = useTranslations('components.register-client');
+  const [isStart, setIsStart]   = useState(false);
   const [isStatus, setIsStatus] = useState<typeStatus>('pending');
   const onRegister = () => {
     setIsStart(true);
   };
+
 
   const {
     register,
@@ -38,13 +40,14 @@ const RegisterClientForm = ({ onClose }: Props) => {
     getValues,
   } = useForm<SignIn>();
 
+
   const { error, setError, isLoading, doSubmit } = useSubmit<SignIn, void>(
-    'Te has registrado correctamente como cliente',
+    tClient('successful-account'),
   );
 
   const onSubmit: SubmitHandler<SignIn> = async (data) => {
     try {
-      if (!data) return setError('Debe completar la información');
+      if (!data) return setError(tClient('complete-information'));
       await doSubmit({ data, callback: authService.registerClient });
       setIsStatus('success');
     } catch (error) {
@@ -58,14 +61,14 @@ const RegisterClientForm = ({ onClose }: Props) => {
           {isStatus === 'pending' ? (
             <div className="form-initial mt-4 w-fit xl:w-full">
               <h2 className="whitespace-pre text-center text-xl font-semibold leading-none tracking-tight text-gray-900 md:text-2xl">
-                Registrate ahora
+                {tClient('register-now')}
               </h2>
               <p className="text-balance text-gray-900 text-center text-lg opacity-70">
-                Seremos los intermediarios para ayudar a tu mascota, juntos.
+                {tClient('description')}
               </p>
               <form onSubmit={handleSubmit(onSubmit)} className="base-form">
                 <FieldInput
-                  label={t('input.email')}
+                  label={tInput('email')}
                   type="email"
                   id="email"
                   name="email"
@@ -74,7 +77,7 @@ const RegisterClientForm = ({ onClose }: Props) => {
                   rules={{
                     required: {
                       value: true,
-                      message: t('validates.email'),
+                      message: tValidates('email'),
                     },
                   }}
                   isRequired={true}
@@ -82,7 +85,7 @@ const RegisterClientForm = ({ onClose }: Props) => {
                 />
                 <div className="container-inputs flex-col">
                   <FieldInput
-                    label={t('input.password')}
+                    label={tInput('password')}
                     type="password"
                     name="password"
                     id="password"
@@ -91,42 +94,42 @@ const RegisterClientForm = ({ onClose }: Props) => {
                     rules={{
                       required: {
                         value: true,
-                        message: t('validates.password.required'),
+                        message: tValidates('password-required'),
                       },
                       minLength: {
                         value: 8,
-                        message: t('validates.password.eight'),
+                        message: tValidates('password-eight'),
                       },
                       pattern: {
                         value: regexPassword,
-                        message: t('validates.password.regex'),
+                        message: tValidates('password-requirements'),
                       },
                     }}
                     isRequired={true}
                     placeholder="••••••••••"
                   />
                   <FieldInput
-                    label={t('input.confirm-password')}
+                    label={tInput('confirm-password')}
                     name="confirm_password"
                     error={errors.confirm_password?.message as string}
                     register={register}
                     rules={{
                       required: {
                         value: true,
-                        message: t('validates.confirm-password.required'),
+                        message: tValidates('password-required'),
                       },
                       minLength: {
                         value: 8,
-                        message: t('validates.confirm-password.eight'),
+                        message: tValidates('password-eight'),
                       },
                       validate: (value) => {
                         const { password } = getValues();
                         if (password !== value)
-                          return t('validates.confirm-password.equal');
+                          return tValidates('passwords-match');
                       },
                       pattern: {
                         value: regexPassword,
-                        message: t('validates.password.regex'),
+                        message: tValidates('password-requirements'),
                       },
                     }}
                     type="password"
@@ -135,21 +138,21 @@ const RegisterClientForm = ({ onClose }: Props) => {
                     placeholder="••••••••••"
                   />
                 </div>
-                <ButtonPrimary loading={isLoading}>Registrarse</ButtonPrimary>
+                <ButtonPrimary loading={isLoading}>{tClient('register-client')}</ButtonPrimary>
               </form>
               <small className="mt-2 text-center text-xs text-gray-800">
-                ¿Ya tienes una cuenta?{' '}
+                 {tClient('already-have-account')}{' '}
                 <Link
                   className="font-semibold text-primary transition-opacity hover:opacity-80"
                   href="loguearse"
                 >
-                  Iniciar sesión
+                   {tClient('sign-in')}
                 </Link>
               </small>
               <small className="-my-2 text-xs text-gray-700">
-                Al registrarte aceptas los{' '}
+                  {tClient('accept-terms')}{' '}
                 <a href="#" className="text-primary transition-opacity hover:opacity-80">
-                  terminos y condiciones
+                  {tClient('terms-and-conditions')}
                 </a>
               </small>
               <div className="w-full text-center">
@@ -160,7 +163,7 @@ const RegisterClientForm = ({ onClose }: Props) => {
                 type="button"
                 className="cursor-pointer -mt-2 mb-1 flex w-fit items-center gap-2 font-medium transition-all hover:-translate-x-2 hover:opacity-80"
               >
-                <LeftOutlined className="text-[14px]" /> Volver
+                <LeftOutlined className="text-[14px]" />{tClient('return')}
               </button>
             </div>
           ) : (
@@ -172,10 +175,8 @@ const RegisterClientForm = ({ onClose }: Props) => {
                 height={125}
                 className="mx-auto bg-cover motion-safe:animate-bounce"
               />
-              <span className="text-xl font-bold">Activación de cuenta</span>
-              <span className="text-base font-light">
-                Puede revisar su correo eléctronico
-              </span>
+              <span className="text-xl font-bold">{tClient('activation')}</span>
+              <span className="text-base font-light">{tClient('check')}</span>
             </div>
           )}
         </>
