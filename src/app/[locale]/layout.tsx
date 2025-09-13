@@ -7,8 +7,14 @@ import { siteConfig } from '@/core/side';
 import { nexa } from '@/fonts';
 import { Locale } from '@/models/locale';
 import Provider from '@/components/Provider';
+
 import '../../styles/globals.css';
 import 'react-phone-input-2/lib/style.css';
+
+type Props = {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL as string),
@@ -77,16 +83,12 @@ export const metadata: Metadata = {
   },
 };
 
-type Props = {
-  children: ReactNode;
-  params: { locale: string };
-};
-
-export default async function RootLayout({ children, params: { locale } }: Props) {
+export default async function RootLayout({ children, params }: Props) {
   const messages = await getMessages();
+  const { locale } = await params
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="overflow-x-hidden">
       <body className={`font-sans antialiased ${nexa.className}`}>
         <NextIntlClientProvider messages={messages}>
           <Provider locale={locale as Locale}>{children}</Provider>

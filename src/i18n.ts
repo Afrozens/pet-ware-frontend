@@ -5,6 +5,7 @@ import { getRequestConfig } from 'next-intl/server';
 import { type AbstractIntlMessages } from 'next-intl';
 
 import { locales, type Locale, defaultLocale } from '@/models/locale'; // Add defaultLocale to your imports
+import { cookies } from 'next/headers';
 
 const messageImports = {
   en: () => import('./messages/en.json'),
@@ -16,8 +17,9 @@ export function isValidLocale(locale: unknown): locale is Locale {
 }
 
 export default getRequestConfig(async (params) => {
+  const localeByCookie = (await cookies()).get('NEXT_LOCALE')
   // Add fallback to default locale if params.locale is missing
-  const locale = params.locale || defaultLocale;
+  const locale = localeByCookie?.value as 'es' | 'en';
   const baseLocale = new Intl.Locale(locale).baseName;
 
   if (!isValidLocale(baseLocale)) notFound();
