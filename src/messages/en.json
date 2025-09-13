@@ -1,6 +1,7 @@
 {
   "hello": "Hello",
   "input": {
+    "back": "back",
     "password": "Password",
     "first-name": "Name",
     "last-name": "Last Name",

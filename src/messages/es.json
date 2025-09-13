@@ -1,6 +1,7 @@
 {
   "hello": "Hola",
   "input": {
+    "back": "volver",
     "password": "Contraseña",
     "first-name": "Nombre",
     "last-name": "Apellido",
