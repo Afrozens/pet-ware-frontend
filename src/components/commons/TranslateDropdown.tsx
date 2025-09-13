@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { Dropdown } from 'antd';
 import type { MenuProps } from 'antd';
@@ -10,9 +10,8 @@ import { GlobalOutlined } from '@ant-design/icons';
 import { Locale } from '@/models/locale';
 
 const TranslateDropdown = () => {
-  const t = useTranslations('components.translate-dropdown');
   const router = useRouter();
-  const pathname = usePathname();
+  const locale = useLocale();
 
   const handleLocaleChange = (newLocale: Locale): void => {
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
@@ -22,21 +21,20 @@ const TranslateDropdown = () => {
   const items: MenuProps['items'] = [
     {
       label: (
-        <span
+        <div
           onClick={() => handleLocaleChange('es')}
-          className="flex gap-2 text-lg font-light"
+          className={`p-2 rounded-lg text-lg font-light ${locale === 'es' ? 'bg-gray-200' : ''}`}
         >
           <Image src="/icons/spain-flag.svg" alt="flag of spain" width={32} height={32} />
-          {t('spanish')} (ES)
-        </span>
+        </div>
       ),
       key: '0',
     },
     {
       label: (
-        <span
+        <div
           onClick={() => handleLocaleChange('en')}
-          className="flex gap-2 text-lg font-light"
+          className={`p-2 rounded-lg text-lg font-light ${locale === 'en' ? 'bg-gray-200' : ''}`}
         >
           <Image
             src="/icons/english-flag.svg"
@@ -44,8 +42,7 @@ const TranslateDropdown = () => {
             width={32}
             height={32}
           />
-          {t('english')} (US)
-        </span>
+        </div>
       ),
       key: '1',
     },
@@ -57,7 +54,7 @@ const TranslateDropdown = () => {
       trigger={['click']}
       placement="bottomRight"
     >
-      <button type="button" className="w-fit px-2 btn-ghost text-white">
+      <button type="button" className={'w-fit px-2 btn-ghost hover:text-gray-500 text-white'}>
         <GlobalOutlined className={`text-lg text-white`} />
       </button>
     </Dropdown>
