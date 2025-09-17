@@ -70,7 +70,7 @@ const LoginForm = () => {
         placeholder="••••••••••"
       />
       <Link
-        href={'/recovery'}
+        href={'/recovery-password'}
         className="transition-opacity ml-auto w-fit hover:opacity-80"
       >
         <small>{t('components.auth.forgot.recovery')}</small>

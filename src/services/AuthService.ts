@@ -1,5 +1,5 @@
 import axios from './instance';
-import { SignIn, SignInResponse, SignUpProfessional } from '@/models/auth';
+import { SignIn, SignInResponse, SignUpProfessional, RecoveryPassword } from '@/models/auth';
 import { formatedErrorServices } from '@/utils/error';
 
 /**
@@ -60,6 +60,23 @@ class AuthService {
       throw formatedErrorServices(error);
     }
   }
+
+  /**
+ * Sends a password recovery request for a user
+ * @param {RecoveryPassword} dataOutside - The user's email address
+ * @throws {Error} When the recovery request fails
+ */
+  recoverPassword = async (dataOutside: RecoveryPassword) => {
+    try {
+      const data = {
+        email: dataOutside.email.toLowerCase(),
+      };
+      await axios.post('/auth/recovery-password', data);
+
+    } catch (error) {
+      throw formatedErrorServices(error);
+    }
+  };
 }
 
 export default AuthService;
