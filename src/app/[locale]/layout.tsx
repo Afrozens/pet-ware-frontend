@@ -13,7 +13,7 @@ import 'react-phone-input-2/lib/style.css';
 
 type Props = {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: 'es' | 'en' }>;
 };
 
 export const metadata: Metadata = {

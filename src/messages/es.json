@@ -2,6 +2,7 @@
   "hello": "Hola",
   "input": {
     "back": "volver",
+    "current-password": "Contraseña actual",
     "password": "Contraseña",
     "first-name": "Nombre",
     "last-name": "Apellido",

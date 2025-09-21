@@ -1,5 +1,5 @@
 import axios from './instance';
-import { SignIn, SignInResponse, SignUpProfessional, RecoveryPassword } from '@/models/auth';
+import { SignIn, SignInResponse, SignUpProfessional, RecoveryPassword, ResetPassword, ForgotPassword } from '@/models/auth';
 import { formatedErrorServices } from '@/utils/error';
 
 /**
@@ -77,6 +77,40 @@ class AuthService {
       throw formatedErrorServices(error);
     }
   };
+
+    /**
+ * Sends a password recovery request for a user
+ * @param {RecoveryPassword} dataOutside - The user's email address
+ * @throws {Error} When the recovery request fails
+ */
+  resetPassword = async (dataOutside: Omit<ForgotPassword, 'password'>) => {
+    try {
+      await axios.post('/auth/reset-password', dataOutside);
+
+    } catch (error) {
+      throw formatedErrorServices(error);
+    }
+  };
+
+  /**
+   * asdasda
+   * 
+   */
+  resetVerifyPassword = async (dataOutside: Pick<ForgotPassword, 'token' | 'email'>): Promise<boolean> => {
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/reset-verify-token`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dataOutside)
+      })
+      const result = await response.json()
+      return result
+    } catch (error) {
+      throw formatedErrorServices(error);
+    }
+  }
 }
 
 export default AuthService;

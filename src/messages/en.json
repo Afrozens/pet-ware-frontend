@@ -2,6 +2,7 @@
   "hello": "Hello",
   "input": {
     "back": "back",
+    "current-password": "Current Password",
     "password": "Password",
     "first-name": "Name",
     "last-name": "Last Name",
