@@ -8,7 +8,7 @@ type Props = {
 
 export default async function DasboardLayout({ children }: Props) {
   return (
-    <div className="flex flex-col bg-[#f2f5fa] min-h-screen w-full justify-start pt-20">
+    <div className="flex flex-col bg-[#f2f5fa] min-h-screen w-full justify-start pt-8">
         {/* <MenuSearch /> */}
         {children}
      <MenuNavigation />

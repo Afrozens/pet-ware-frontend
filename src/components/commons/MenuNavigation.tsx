@@ -56,7 +56,7 @@ const MenuNavigation = () => {
   ]
   return (
     <div className="flex flex-col bg-[#f2f5fa] min-h-screen w-full justify-start pt-20">
-      <aside className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
+      <aside className="fixed top-0 left-0 z-40 w-64 2xl:w-96 h-screen transition-transform -translate-x-full sm:translate-x-0">
         <div className="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200  ">
           
           {/* title menu icon */}
