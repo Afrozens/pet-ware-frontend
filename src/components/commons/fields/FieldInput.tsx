@@ -1,13 +1,14 @@
 'use client';
 
 import { EyeOutlined, EyeInvisibleOutlined, EditOutlined } from '@ant-design/icons';
-import React, { useState } from 'react';
+import React, { ForwardRefExoticComponent, ReactNode, RefAttributes, useState } from 'react';
 import { InputMask } from '@react-input/mask';
 import type { RegisterOptions, UseFormRegister } from 'react-hook-form';
 import Image from 'next/image';
 
 import FieldError from './FieldError';
 import { montserrat } from '@/fonts';
+import { AntdIconProps } from '@ant-design/icons/lib/components/AntdIcon';
 
 type AttributeProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
@@ -27,7 +28,7 @@ type Props = {
   rules?: RegisterOptions;
   isRequired?: boolean;
   withIcon?: boolean;
-  iconSvg?: string;
+  Icon?: ForwardRefExoticComponent<Omit<AntdIconProps, "ref"> & RefAttributes<HTMLSpanElement>>
   withMask?: boolean;
   mask?: string;
 } & AttributeProps;
@@ -44,7 +45,7 @@ const FieldInput = ({
   mask,
   withMask,
   register,
-  iconSvg,
+  Icon,
   withIcon = false,
   ...props
 }: Props) => {
@@ -76,7 +77,7 @@ const FieldInput = ({
             required={isRequired}
             type={currentType}
             autoComplete="current-password"
-            className={`w-full pr-20 pl-5 rounded-[19px] focus:outline-none border-black border-1 font-light bg-[#F3F4F6] py-4 flex items-center`}
+            className={`w-full pr-20 pl-5 rounded-[19px] focus:outline-none border-black border-1 font-light bg-gray-50 py-4 flex items-center`}
             {...(register && register(name as string, rules))}
             name={name}
             {...props}
@@ -87,7 +88,7 @@ const FieldInput = ({
             required={isRequired}
             type={currentType}
             autoComplete="current-password"
-            className={`w-full pr-20 pl-5 rounded-[19px] focus:outline-none border-black border-1 font-light bg-[#F3F4F6] py-4 flex items-center`}
+            className={`w-full pr-20 pl-5 rounded-[19px] focus:outline-none border-gray-300 border-1 font-light bg-gray-50 py-4 flex items-center`}
             {...(register && register(name as string, rules))}
             name={name}
             {...props}
@@ -103,7 +104,7 @@ const FieldInput = ({
           </button>
         ) : (
           <div className="rounded-full shadow-xl w-[36px] h-[36px] bg-white flex justify-center items-center absolute top-1/2 -translate-y-1/2 right-8">
-            <EditOutlined />
+            {withIcon && Icon ? <Icon /> : <EditOutlined />}
           </div>
         )}
       </div>

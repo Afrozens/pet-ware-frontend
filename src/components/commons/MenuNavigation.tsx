@@ -56,10 +56,9 @@ const MenuNavigation = () => {
   ]
   return (
     <div className="flex flex-col bg-[#f2f5fa] min-h-screen w-full justify-start pt-20">
-      <aside className="fixed top-0 left-0 z-40 w-64 2xl:w-96 h-screen transition-transform -translate-x-full sm:translate-x-0">
+      <aside className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
         <div className="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200  ">
           
-          {/* title menu icon */}
           <div className="flex justify-center items-center gap-4 px-2 my-5 mb-12">
             <Image src={'/logotype.svg'} alt="icon svg pet" className="rotate-[4.7rad]" width={32} height={32} />
             <h3 className="text-lg font-semibold text-gray-600 capitalize">Pet Ware</h3>
@@ -68,7 +67,7 @@ const MenuNavigation = () => {
             <ul className="space-y-2">
               <span className="pl-2 uppercase text-xl font-semibold">menu</span>
                 {menuList.map((list, index) => (
-                  <li className={index === 0 ? 'mt-5' : index === (menuList.length - 1) ? 'mb-10' : ''}>
+                  <li key={index} className={index === 0 ? 'mt-5' : index === (menuList.length - 1) ? 'mb-10' : ''}>
                       <Link href={list.route} className={`${pathname === list.route ? 'bg-success-primary text-white hover:opacity-90' : 'text-black hover:bg-gray-100'}  flex items-center p-2 text-base font-normal rounded-lg group`}>
                           <list.icon />
                           <span className="ml-3">{list.name}</span>
@@ -79,7 +78,7 @@ const MenuNavigation = () => {
             <ul className="space-y-2 ">
               <span className="pl-2 uppercase text-lg font-semibold">settings</span>
                 {settingList.map((list, index) => (
-                  <li className={index === 0 ? 'mt-5' : ''}>
+                  <li key={index} className={index === 0 ? 'mt-5' : ''}>
                       <Link href={list.route} className={`${pathname === list.route ? 'bg-success-primary text-white hover:opacity-90' : 'text-black hover:bg-gray-100'}  flex items-center p-2 text-base font-normal rounded-lg group`}>
                           <list.icon />
                           <span className="ml-3">{list.name}</span>
