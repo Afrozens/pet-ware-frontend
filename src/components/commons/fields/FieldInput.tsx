@@ -46,7 +46,7 @@ const FieldInput = ({
   withMask,
   register,
   Icon,
-  withIcon = false,
+  withIcon = true,
   ...props
 }: Props) => {
   const [currentType, setCurrentType] = useState<typeInput>(type);
@@ -103,9 +103,11 @@ const FieldInput = ({
             {currentType === type ? <EyeOutlined /> : <EyeInvisibleOutlined />}
           </button>
         ) : (
-          <div className="rounded-full shadow-xl w-[36px] h-[36px] bg-white flex justify-center items-center absolute top-1/2 -translate-y-1/2 right-8">
-            {withIcon && Icon ? <Icon /> : <EditOutlined />}
+          withIcon ? (
+            <div className="rounded-full shadow-xl w-[36px] h-[36px] bg-white flex justify-center items-center absolute top-1/2 -translate-y-1/2 right-8">
+            {Icon ? <Icon /> : <EditOutlined />}
           </div>
+          ) : null
         )}
       </div>
       <FieldError error={error} />

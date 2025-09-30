@@ -19,6 +19,7 @@
     "@vis.gl/react-google-maps": "^1.5.2",
     "antd": "^5.24.6",
     "axios": "^1.8.4",
+    "moment": "^2.30.1",
     "motion": "^12.6.3",
     "next": "15.2.4",
     "next-intl": "^4.0.2",
