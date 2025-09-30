@@ -1,4 +1,5 @@
 import { AntdIconProps } from '@ant-design/icons/lib/components/AntdIcon';
+import { PropsWithChildren } from 'react';
 
 export type OptionType = { [key: string]: any };
 export type OptionsType = Array<OptionType>;
@@ -69,4 +70,10 @@ export interface DataInstagram {
 export interface Option {
   label: string;
   value: string | number;
+}
+
+export interface CardOption extends PropsWithChildren {
+  title: string;
+  description: string;
+  route: string;
 }

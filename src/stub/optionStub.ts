@@ -16,6 +16,31 @@ import {
 
 } from '@ant-design/icons';
 
+export const userStub = {
+              id: 'asdua89s789sd79a7s9d',
+              first_name: 'Eris',
+              last_name: 'chacon',
+              email: 'jesus@example.com',
+              description: '',
+              type_document: 'DNI',
+              phone_number: "",
+              roles_id: '1',
+              active: true,
+              address: '',
+              document: '',
+              verified_at: null,
+              deleted_at: null,
+              created_at: new Date().toISOString(),
+              updated_at: new Date().toISOString(),
+              role: {
+                name: 'admin',
+                id: 'asdasd123123',
+                description: 'regular user',
+                created_at: "",
+                deleted_at: null
+              }
+            }
+
 export const petServiceCategories = [
   {
     label: 'Walking',
