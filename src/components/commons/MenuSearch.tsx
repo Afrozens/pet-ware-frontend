@@ -10,7 +10,7 @@ const MenuSearch = () => {
   return (
  <div className="flex justify-between items-center"> 
       <div className="w-full flex justify-between items-center gap-4">
-          <FieldInput id={"SearchMenu"} label={""}  withIcon Icon={SearchOutlined} classAditional="w-full lg:max-w-xs flex-none xl:max-w-lg 2xl:max-w-xl"/>
+          <FieldInput id={"SearchMenu"} label={""}  withIcon Icon={SearchOutlined} classAditional="pl-4 w-full lg:max-w-xs flex-none xl:max-w-lg 2xl:max-w-xl"/>
           
           <div className="flex-1 flex pr-8 items-center justify-end gap-2">
             <button className="btn-ghost bg-gray-50 border border-gray-300 rounded-full p-2">
@@ -21,7 +21,7 @@ const MenuSearch = () => {
             </button>
             <MenuAuth user={{
               id: 'asdua89s789sd79a7s9d',
-              first_name: 'jesus',
+              first_name: 'Eris',
               last_name: 'chacon',
               email: 'jesus@example.com',
               description: '',

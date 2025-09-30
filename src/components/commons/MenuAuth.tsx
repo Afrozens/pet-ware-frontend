@@ -158,7 +158,7 @@ const MenuAuth = ({ user }: Props) => {
                   <MenuOutlined className="font-black" />
                   <AvatarGenerate
                     src={null}
-                    name={'pepe'}
+                    name={user?.first_name}
                     size={40}
                     userId={'512412'}
                   />
