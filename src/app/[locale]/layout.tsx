@@ -9,6 +9,7 @@ import { Locale } from '@/models/locale';
 import Provider from '@/components/Provider';
 
 import '../../styles/globals.css';
+import 'react-multi-carousel/lib/styles.css';
 import 'react-phone-input-2/lib/style.css';
 
 type Props = {

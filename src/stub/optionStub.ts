@@ -1,3 +1,99 @@
+import { 
+  HomeOutlined, 
+  MedicineBoxOutlined, 
+  CarOutlined, 
+  HeartOutlined,
+  ToolOutlined,
+  ExperimentOutlined,
+  CameraOutlined,
+  SafetyOutlined,
+  TeamOutlined,
+  ThunderboltOutlined,
+  CrownOutlined,
+  RocketOutlined,
+  SoundOutlined,
+  ForkOutlined,
+
+} from '@ant-design/icons';
+
+export const petServiceCategories = [
+  {
+    label: 'Walking',
+    value: 'walking',
+    icon: SoundOutlined
+  },
+  {
+    label: 'Daycare',
+    value: 'daycare',
+    icon: HomeOutlined
+  },
+  {
+    label: 'Grooming',
+    value: 'grooming',
+    icon: ToolOutlined
+  },
+  {
+    label: 'Training',
+    value: 'training',
+    icon: ThunderboltOutlined
+  },
+  {
+    label: 'Veterinary',
+    value: 'veterinary',
+    icon: MedicineBoxOutlined
+  },
+  {
+    label: 'Transport',
+    value: 'transport',
+    icon: CarOutlined
+  },
+  {
+    label: 'Boarding',
+    value: 'boarding',
+    icon: SafetyOutlined
+  },
+  {
+    label: 'Cat Care',
+    value: 'cat-care',
+    icon: ForkOutlined
+  },
+  {
+    label: 'Emergency',
+    value: 'emergency',
+    icon: HeartOutlined
+  },
+  {
+    label: 'Physio',
+    value: 'physiotherapy',
+    icon: TeamOutlined
+  },
+  {
+    label: 'Exotic',
+    value: 'exotic',
+    icon: ExperimentOutlined
+  },
+  {
+    label: 'Photography',
+    value: 'photography',
+    icon: CameraOutlined
+  },
+  {
+    label: 'Spa',
+    value: 'spa',
+    icon: CrownOutlined
+  },
+  {
+    label: 'Feeding',
+    value: 'feeding',
+    icon: RocketOutlined
+  },
+  {
+    label: 'Bird Care',
+    value: 'bird-care',
+    icon: ExperimentOutlined
+  }
+];
+
 export const optionLocation = [
   {
     label: 'Villa Central, Ciudad Guayana',

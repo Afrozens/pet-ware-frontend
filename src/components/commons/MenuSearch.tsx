@@ -8,7 +8,7 @@ import { SearchOutlined } from "@ant-design/icons";
 
 const MenuSearch = () => {
   return (
- <div className="flex justify-between items-center pl-72"> 
+ <div className="flex justify-between items-center"> 
       <div className="w-full flex justify-between items-center gap-4">
           <FieldInput id={"SearchMenu"} label={""}  withIcon Icon={SearchOutlined} classAditional="w-full lg:max-w-xs flex-none xl:max-w-lg 2xl:max-w-xl"/>
           

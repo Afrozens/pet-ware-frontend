@@ -10,8 +10,10 @@ type Props = {
 export default async function DasboardLayout({ children }: Props) {
   return (
     <div className="flex flex-col relative bg-[#f2f5fa] min-h-screen w-full justify-start pt-8">
-      <MenuSearch /> 
+      <main className='w-full min-h-screen pl-72'>
+        <MenuSearch /> 
         {children}
+      </main>
      <MenuNavigation />
     </div>
   );

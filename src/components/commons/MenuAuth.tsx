@@ -1,15 +1,11 @@
 'use client';
 
 import { Dropdown, MenuProps } from 'antd';
-import { LoadingOutlined, MenuOutlined, CloseOutlined } from '@ant-design/icons';
+import { LoadingOutlined, MenuOutlined } from '@ant-design/icons';
 import { montserrat } from '@/fonts';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 import { User } from '@/models/user';
-// import useLogout from '@/hooks/useLogout';
-// import Loader from './Loader';
-import Image from 'next/image';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import useOpen from '@/hooks/useOpen';
 import AvatarGenerate from './AvatarGenerate';
 
