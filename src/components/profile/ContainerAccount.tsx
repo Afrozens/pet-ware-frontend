@@ -1,3 +1,5 @@
+import CardOption from "./Card"
+
 interface Props {
     profileId: string
 }
@@ -11,7 +13,7 @@ const ContainerAccount = ({}: Props) => {
       <div className="flex flex-col container xl:max-w-5xl w-full mx-auto items-center mt-5 justify-start">
         {/* <IndicatorUser user={userStub} /> */}
         <div className="text-black flex flex-wrap justify-start w-full gap-5 mb-20">
-          {/* Card Option here */}
+          <CardOption/>
         </div>
       </div>
     </div>

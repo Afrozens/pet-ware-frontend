@@ -45,6 +45,13 @@ export interface List {
   disabled?: boolean;
 }
 
+export interface CardProps {
+  title: string;
+  description: string;
+  icon: React.ForwardRefExoticComponent<Pick<AntdIconProps, any>>;
+}
+
+
 interface Text {
   text: string;
 }
