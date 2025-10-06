@@ -46,10 +46,7 @@ const settingList2: CardProps[] = [
   },
 ];
 
-
-interface CardOptionProps extends CardProps {}
-
-const CardOption: React.FC<CardOptionProps> = ({ title, icon: Icon, description }) => {
+const CardOption = ({ title, icon: Icon, description }: CardProps) => {
   return (
     <div className="max-w-xs min-w-xs bg-white text-gray-900 rounded-xl shadow-lg p-6 flex flex-col justify-between m-3">
       <div className="mb-4">
