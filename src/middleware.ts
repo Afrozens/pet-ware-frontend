@@ -18,7 +18,8 @@ export function middleware(req: NextRequest) {
     '/recovery-password',
     '/reset-password',
     '/',
-    '/dashboard/hosting'
+    '/dashboard/hosting',
+    '/pepe'
   ];
   const isPublicRoute = publicRoutes.some((route) => req.nextUrl.pathname === route);
 
